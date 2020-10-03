@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Descendant Selector</title>
+    <style>
+        .section1 p {
+            color: red;
+        }
+
+        /* section1 클래스의 요소 중 자손 태그가 p인 모든 요소 */
+
+        .section2 p {
+            color: blue;
+        }
+
+        /* section2 클래스의 요소 중 자손 태그가 p인 모든 요소 */
+    </style>
+</head>
+
+<body>
+    <div class="section1">
+        <p>Outer1</p>
+        <div>
+            <p>Inner1</p>
+            <h4>Inner1-1</h4>
+        </div>
+    </div>
+    <div class="section2">
+        <p>Outer2</p>
+        <div>
+            <P>Inner2</P>
+            <h4>Inner1-1</h4>
+        </div>
+    </div>
+</body>
+
+</html>
