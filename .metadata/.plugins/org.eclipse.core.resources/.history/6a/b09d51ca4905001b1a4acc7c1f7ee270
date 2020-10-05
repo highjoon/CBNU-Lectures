@@ -1,0 +1,35 @@
+
+public class calculationHW {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int i = 50;
+		int j = 2;
+		int h = 32;
+		
+		
+		System.out.println("=== 산술 연산자 ===");
+		System.out.println("덧셈 : " + (i + j));
+		System.out.println("뺄셈 : " + (i - j));
+		System.out.println("곱셈 : " + (i * j));
+		System.out.println("나눗셈 : " + (i / j));
+		System.out.println("나머지 : " + (i % j));
+		
+		
+		System.out.println("=== 자동증감 연산자 ===");
+		i++;
+		System.out.println("증가1 : " + i);
+		j--;
+		System.out.println("감소1 : " + j);
+		++i;
+		System.out.println("증가2 : " + i);
+		--j;
+		System.out.println("감소2 : " + j);
+		
+		
+		System.out.println("=== 동등비교, 관계 연산자 ===");
+	}
+
+}

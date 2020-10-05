@@ -1,0 +1,37 @@
+
+public class calculationHW {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int i = 50;
+		int j = 2;
+		int h = 32;
+		
+		
+		System.out.println("=== »ê¼ú ¿¬»êÀÚ ===");
+		System.out.println("µ¡¼À : " + (i + j));
+		System.out.println("»¬¼À : " + (i - j));
+		System.out.println("°ö¼À : " + (i * j));
+		System.out.println("³ª´°¼À : " + (i / j));
+		System.out.println("³ª¸ÓÁö : " + (i % j));
+		
+		
+		System.out.println("=== ÀÚµ¿Áõ°¨ ¿¬»êÀÚ ===");
+		i++;
+		System.out.println("Áõ°¡1 : " + i);
+		j--;
+		System.out.println("°¨¼Ò1 : " + j);
+		++i;
+		System.out.println("Áõ°¡2 : " + i);
+		--j;
+		System.out.println("°¨¼Ò2 : " + j);
+		
+		
+		System.out.println("=== µ¿µîºñ±³, °ü°è ¿¬»êÀÚ ===");
+		System.out.println("i == j >> " + (i == j));
+		System.out.println("i |= j >> " + (i |= j));
+	}
+
+}
