@@ -9,7 +9,7 @@ public class EvenOdd {
 
 		int number;
 		Scanner input = new Scanner(System.in);
-		System.out.println("정수를 입력하시오. :");
+		System.out.print("정수를 입력하시오. :");
 		number = input.nextInt();
 
 		if (number % 2 == 0) {
