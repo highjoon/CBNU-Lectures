@@ -8,7 +8,7 @@ public class Larger {
 
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("첫번째 정수: ");
+		System.out.print("첫번째 정수: ");
 		x = input.nextInt();
 
 		System.out.println("두번째 정수: ");
