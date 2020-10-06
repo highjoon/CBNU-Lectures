@@ -11,7 +11,7 @@ public class Bonus {
 		String result;
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("실적을 입력하시오(단위: 만원): ");
+		System.out.print("실적을 입력하시오(단위: 만원): ");
 		mySales = input.nextInt();
 		
 		if (mySales >= targetSales) {
