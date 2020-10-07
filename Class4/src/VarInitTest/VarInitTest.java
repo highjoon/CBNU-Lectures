@@ -8,8 +8,8 @@ public class VarInitTest {
 
 		int index;
 		
-		index = index + 1;
-		System.out.println("index : " + index);
+		//index = index + 1;
+		//System.out.println("index : " + index);
 	}
 
 }
