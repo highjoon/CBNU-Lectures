@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flex아이템 Flex Basis 실습</title>
+    <style>
+        .flex-box {
+            display: flex;
+            width: 600px;
+            height: 250px;
+            background-color: lightgray;
+        }
+
+        .flex-item {
+            /* width: 100px; */
+            margin: 10px;
+            background-color: cornflowerblue;
+            flex-grow: 1;
+            flex-basis: auto;
+            /* flex-basis: 0; */
+            flex-basis: 100px;
+        }
+
+        .item1 {
+            flex-shrink: 1;
+        }
+
+        .item2 {
+            flex-shrink: 2;
+        }
+
+        .item3 {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">1234567890</div>
+        <div class="flex-item item3">12345</div>
+    </div>
+</body>
+
+</html>
