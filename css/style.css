@@ -27,7 +27,6 @@ main {
     grid-area: main;
     grid-column: span 3;
     height: 200px;
-
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
