@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animation 정육면체 실습</title>
+    <style>
+        body {
+            width: 200px;
+            margin: 200px auto;
+        }
+
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+            transform-style: preserve-3d;
+            animation: cube 3s linear 0s infinite;
+        }
+
+        @keyframes cube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+        .face {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.3;
+        }
+
+        .face:nth-child(1) {
+            transform: rotateY(0deg) translate3d(0px, 0px, 100px);
+            background-color: red;
+        }
+
+        .face:nth-child(2) {
+            transform: rotateY(90deg) translate3d(0px, 0px, 100px);
+            background-color: green;
+        }
+
+        .face:nth-child(3) {
+            transform: rotateY(180deg) translate3d(0px, 0px, 100px);
+            background-color: blue;
+        }
+
+        .face:nth-child(4) {
+            transform: rotateY(270deg) translate3d(0px, 0px, 100px);
+            background-color: yellow;
+        }
+
+        .face:nth-child(5) {
+            transform: rotateX(90deg) translate3d(0px, 0px, 100px);
+            background-color: brown;
+        }
+
+        .face:nth-child(6) {
+            transform: rotateX(270deg) translate3d(0px, 0px, 100px);
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="face"></div>
+        <div class="face"></div>
+        <div class="face"></div>
+        <div class="face"></div>
+        <div class="face"></div>
+        <div class="face"></div>
+    </div>
+</body>
+
+</html>
