@@ -195,15 +195,6 @@ aside {
     transition-duration: 1s;
 }
 
-aside>img {
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 300px;
-    padding-right: 60px;
-    transition-duration: 1s;
-}
-
 aside>img:hover {
     transform: scale(1.1);
     opacity: 1;
@@ -217,6 +208,7 @@ aside>a {
     height: 300px;
     margin-right: 60px;
     transition-duration: 1s;
+    background-size: cover;
 }
 
 aside>a:hover {
