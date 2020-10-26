@@ -195,12 +195,6 @@ aside {
     transition-duration: 1s;
 }
 
-aside>img:hover {
-    transform: scale(1.1);
-    opacity: 1;
-    z-index: 1; 
-}
-
 aside>a {
     position: relative;
     float: left;
@@ -241,7 +235,7 @@ aside > p {
     grid-area: sidebar;
 }
 
-.sidebar>a {
+.sidebar > a {
     position: relative;
     float: left;
     width: 100%;
@@ -251,7 +245,7 @@ aside > p {
     background-size: cover;
 }
 
-.sidebar>a:hover {
+.sidebar > a:hover {
     transform: scale(1.1);
     opacity: 1;
     z-index: 1;
