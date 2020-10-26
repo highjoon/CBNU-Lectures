@@ -10,7 +10,7 @@
 
 .container {
     display: grid;
-    width: 75%;
+    width: 80%;
     grid-template-rows: repeat(6, auto);
     row-gap: 50px;
     column-gap: 10px;
@@ -77,21 +77,44 @@ main {
     overflow: hidden;
     transition-duration: 2s;
     font-family: 'HansCali';
-}
-
-main>div {
-    width: 100%;
-    height: 80%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     display: block;
-    color: white;
 }
 
-main h1 {
-    /* text-align: center; */
-    animation-name: banner-content;
-    animation-duration: 3s;
-    justify-self: center;
-    animation-timing-function: ease-in-out;
+span {
+    transform: skew(-10deg);
+    display: block;
+    float: left;
+}
+
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 47px;
+    letter-spacing: 2px;
+    height: 70%;
+    animation: banner-content 2s infinite alternate;
+}
+
+.title {
+    transform: translateX(-50%) rotate(-10deg);
+    float: left;
+    top: 25%;
+    left: 30%;
+    position: relative;
+    font-size: 45px;
+}
+
+.title2 {
+    transform: translateX(-50%) rotate(-10deg);
+    float: left;
+    top: 40%;
+    left: -5%;
+    position: relative;
+    font-size: 40px;
 }
 
 @keyframes banner-content {
@@ -101,17 +124,24 @@ main h1 {
         opacity: 1;
     }
 }
-
-#banner1 {
-    padding-left: 10%;
-    font-size: 70px;
-    margin: 0 auto;
+#items {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'SeoulHan';
+    padding: 0 0;
 }
 
-#banner2 {
-    padding-left: 20%;
-    font-size: 50px;
-    margin: 0 auto;
+#items:visited {
+    text-decoration: none;
+}
+
+#items:hover {
+    text-decoration: none;
+}
+
+#items:focus {
+    text-decoration: none;
 }
 
 section {
@@ -119,19 +149,39 @@ section {
     padding-right: 20px;
 }
 
-section>img {
+section>a {
     position: relative;
     float: left;
     width: 45%;
     height: 300px;
-    padding-right: 60px;
+    margin-right: 60px;
     transition-duration: 1s;
 }
 
-section>img:hover {
+section>a:hover {
     transform: scale(1.1);
     opacity: 1;
-    z-index: 1; 
+    z-index: 1;
+}
+
+section>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+section>a:hover>.bar {
+    width: 90%;
+    height: 90%;
+}
+
+.bar>p {
+    margin: 5%;
+    color: black;
 }
 
 section>p {
@@ -143,6 +193,7 @@ aside {
     justify-self: center;
     width: 100%;
     padding-right: 20px;
+    transition-duration: 1s;
 }
 
 aside>img {
@@ -160,6 +211,36 @@ aside>img:hover {
     z-index: 1; 
 }
 
+aside>a {
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 300px;
+    margin-right: 60px;
+    transition-duration: 1s;
+}
+
+aside>a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+aside>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+aside>a:hover>.bar {
+    width: 90%;
+    height: 90%;
+}
+
 aside > p {
     width: 100%;
     font-size: 30px;
@@ -169,15 +250,35 @@ aside > p {
     grid-area: sidebar;
 }
 
-.sidebar>img {
+.sidebar>a {
+    position: relative;
+    float: left;
     width: 100%;
+    height: 100%;
+    margin-right: 60px;
     transition-duration: 1s;
+    background-size: cover;
 }
 
-.sidebar>img:hover {
+.sidebar>a:hover {
     transform: scale(1.1);
     opacity: 1;
-    z-index: 1; 
+    z-index: 1;
+}
+
+.sidebar>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.sidebar>a:hover>.bar {
+    width: 90%;
+    height: 90%;
 }
 
 .content {
@@ -206,17 +307,35 @@ aside > p {
     font-size: 30px;
 }
 
-.content3>img {
-    justify-self: flex-end;
+.content3>a {
+    position: relative;
+    float: left;
     width: 100%;
-    height: 500px;
+    height: 300px;
+    margin-right: 60px;
     transition-duration: 1s;
+    background-size: cover;
 }
 
-.content3>img:hover {
+.content3>a:hover {
     transform: scale(1.1);
     opacity: 1;
-    z-index: 1; 
+    z-index: 1;
+}
+
+.content3>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.content3>a:hover>.bar {
+    width: 90%;
+    height: 90%;
 }
 
 p {
@@ -229,12 +348,12 @@ section, aside, .content, .content2 {
 
 h2 {
     font-size: 50px;
+    color: black;
 }
 
 footer {
     grid-area: footer;
     text-align: center;
-    background-color: lightslategray;
 }
 
 footer p {
