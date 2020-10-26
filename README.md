@@ -3,6 +3,8 @@
 CSS의 transiton, transform, animation 속성을 적용하여 <br>
 4주차 과제의 레이아웃을 재구성하는 과제입니다. <br>
 
+<a href="#"><img src="./example/Example.png" width="400px" height="500px" alt="Original_Image"></a>
+
 # 2. 주요 코드 설명
 단순히 5주차 강의 내용을 반영하는 정도에 그치지 않고 <br>
 전체적인 디자인과 구성을 수정했습니다.<br><br>
@@ -30,7 +32,7 @@ CSS의 transiton, transform, animation 속성을 적용하여 <br>
     - 시각 효과를 위해 폰트 교체.
         - HanS_Calli.ttf
         - seoulhangang.ttf
-        - <a>https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css</a>
+        - <a> https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css </a>
 3. **5주차 강의내용 반영.**
     - 웹페이지 실행 시 메인 배너 사진이 이동.
         - ``` transform: translate(-50%, -50%);```
@@ -44,6 +46,14 @@ CSS의 transiton, transform, animation 속성을 적용하여 <br>
             - ``` @keyframes banner-content { from { opacity: 0; } to { opacity: 1; } } ```
             - ``` animation: banner-content 2s infinite alternate; ```
                 - count : infinite, direct : alternate 를 부여하여 애니메이션이 항상 지속되도록 설정.
-    - 각 Grid 속의 사진이 마우스를 갖다대면 확장되는 효과 부여.
+    - 각 Grid 속의 사진이 마우스를 갖다대면 (hover) 크기가 커지는 효과 부여.
         - ``` transition-duration: 1s;  ```
         - ``` ~:hover { transform: scale(1.1); opacity: 1; z-index: 1;}```
+        - 크기가 커지는 동시에 홍보 문구와 함께 새로운 div가 보이도록 설정. (0.5의 opacity를 갖는 반투명한 div)
+            - ``` transition-duration: 1s;  ```
+            - ``` section>a>.bar { width: 0; height: 0; transition-duration: 1s; overflow: hidden; opacity: 0.5; background: linear-gradient(#cb60b3 0%, #db36a4 100%);} ```
+            - ``` section>a:hover:.bar { width: 90%; height: 90%; } ```
+
+# 3. 결과
+
+<a href="#"><img src="./example/Final.png" width="400px" height="500px" alt="Final_Image"></a>
