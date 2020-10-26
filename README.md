@@ -11,12 +11,11 @@ CSS의 transiton, transform, animation 속성을 적용하여 <br>
 
 1. **서울특별시 홍보 사이트를 컨셉으로 지정.**
     - 서울특별시 로고 추가.
-        - <a href="#"><img src="./images/seoul_logo.png" width="400px" height="100px" alt="seoul_logo"></a>
-        - <a href="#"><img src="./images/seoul_title.png" width="200px" height="100px" alt="seoul_title"></a>
-    <br>
+        - <a href="#"><img src="./images/seoul_logo.png" width="400px" height="100px" alt="seoul_logo"></a> <br><br><br>
+        - <a href="#"><img src="./images/seoul_title.png" width="200px" height="100px" alt="seoul_title"></a> <br><br><br>
     - 메인 배너 이미지 교체.
         - <a href="#"><img src="./images/seoulnight.png" width="400px" height="300px" alt="seoul_night"></a>
-    <br>
+    <br><br>
     - 각 grid에 서울 관광명소 사진과 그 부연설명 작성 및 공식홈페이지 링크 부여.
         - 추가된 관광명소는 다음과 같습니다.
             - 경복궁
