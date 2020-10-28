@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>switch / case 문 실습</title>
+</head>
+
+<body>
+    <script>
+        let score = prompt("점수 입력 : ");
+
+        switch (parseInt(score / 10)) {
+            case 10:
+            case 9:
+                document.write("A 학점");
+                break;
+            case 8:
+                document.write("B 학점");
+                break;
+            case 7:
+                document.write("C 학점");
+                break;
+            default:
+                document.write("D 학점");
+        }
+    </script>
+</body>
+
+</html>
