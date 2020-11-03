@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>생성자 패턴 실습</title>
+</head>
+
+<body>
+    <script>
+        function createCharacter(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.say = function () {
+                document.write(`Hi~ My name is ${this.lastName}`);
+            }
+        };
+
+        const c1 = new createCharacter('길동', '홍', 18);
+        const c2 = new createCharacter('춘향', '성', 17);
+        const c3 = new createCharacter('꺽정', '임', 30);
+
+        c1.say();
+        document.write('<br>');
+        c2.say();
+        document.write('<br>');
+        c3.say();
+
+    </script>
+
+</body>
+
+</html>
