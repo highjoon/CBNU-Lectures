@@ -1,5 +1,12 @@
 package hw4;
 
+// 교통수단을 이용하여 목적지까지 이동하는 과정으로 작성.
+// 1. 교통수단 이용 (버스, 지하철, 택시).
+// 2. 결제수단 선택 (카드, 현금, 모바일).
+// 탑승한 교통수단에서 하차.
+// 목적지 도착.
+// 순으로 진행.
+
 import java.util.*;
 
 public class Example1 {
@@ -9,6 +16,9 @@ public class Example1 {
 		Scanner s = new Scanner(System.in);
 		int trans;
 		int pay;
+		
+		// 교통수단 선택
+		// switch 문 사용.
 		
 		System.out.printf("어떤 교통수단을 이용하시겠습니까? (1: 버스, 2: 지하철, 3: 택시) ");
 		trans = s.nextInt();
@@ -31,6 +41,9 @@ public class Example1 {
 			break;
 		}
 		
+		
+		// 결제수단 선택
+		// switch 문 사용.
 		System.out.printf("어떤 결제수단을 이용하시겠습니까? (1: 카드, 2: 현금, 3: 모바일) ");
 		pay = s.nextInt();
 		
@@ -54,6 +67,8 @@ public class Example1 {
 		
 		System.out.printf("# 4. 결제를 완료한다.\n");
 
+		
+		// swtich 문을 사용하여 선택한 교통수단에서 하차.
 		switch (trans) {
 				
 				case 1:
@@ -67,6 +82,8 @@ public class Example1 {
 					break;
 				}
 		
+		
+		// 목적지 도착.
 		System.out.printf("목적지에 도착했습니다.\n");
 
 	}
