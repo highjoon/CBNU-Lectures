@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS에서의 객체 실습</title>
+</head>
+
+<body>
+    <script>
+        const hong = {
+            firstName: '길동',
+            lastName: '홍',
+            age: 18,
+            say: function () {
+                document.write('HI~ My name is 길동.');
+            }
+        };
+
+        document.write(hong.lastName);
+        document.write('<br>');
+        document.write(hong['age']);
+        document.write('<br>');
+        hong.say();
+    </script>
+
+</body>
+
+</html>
