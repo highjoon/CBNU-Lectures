@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>getter, setter 실습</title>
+</head>
+
+<body>
+    <script>
+        class Rectangle {
+            constructor(width = 0, height = 0) {
+                this._width = 0;
+                this._height = 0;
+                this.width = width;
+                this.height = height;
+            }
+
+            get width() {
+                return this._width;
+            }
+
+            set width(width) {
+                if (width > 0) {
+                    this._width = width;
+                } else {
+                    this._width = 0;
+                }
+            }
+
+            get height() {
+                return this._height;
+            }
+
+            set height(height) {
+                if (height > 0) {
+                    this._height = height;
+                } else {
+                    this._height = 0;
+                }
+            }
+
+            getArea() {
+                return this._width * this._height;
+            }
+        }
+
+        const rect = new Rectangle();
+        rect.width = 10;
+        rect.height = -1;
+        document.write(rect.width, rect.height);
+        document.write('<br>');
+        document.write(rect.getArea());
+        document.write('<br>');
+        rect.height = 20;
+        document.write(rect.width, rect.height);
+        document.write('<br>');
+        document.write(rect.getArea());
+        document.write('<br>');
+    </script>
+</body>
+
+</html>
