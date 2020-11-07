@@ -2,6 +2,10 @@ package hw5_1;
 
 class Employee {
 	
+	// 모든 필드에 private을 붙임으로써 접근제어 설정.
+	// 간접적인 필드 접근 방식을 사용하여 모든 필드에 접근자 (Getter) 와 설정자 (Setter) 생성.
+	// 설정자 (Setter)에서 this를 사용함으로써 변수에 접근.
+	
 	private String employeeKorName;
 	private String employeeEngName;
 	private int employeeID;
