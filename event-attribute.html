@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Click Event 실습</title>
+</head>
+
+<body>
+    <button>
+        <p>click me</p>
+    </button>
+    <script>
+        const button = document.querySelector('button');
+        const listener = () => {
+            alert("Clicked!!!")
+            document.write("clicked!")
+        };
+
+        button.addEventListener('click', listener);
+        // button.removeEventListener('click', listener);
+    </script>
+</body>
+
+</html>
