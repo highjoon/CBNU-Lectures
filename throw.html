@@ -3,37 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Throw로 예외 발생시키기</title>
+    <title>Throw로 예외 발생시키기 실습 2</title>
 </head>
 
 <body>
+    <h3>회원가입</h3>
+    <form id="sign-up">
+        <label for='user-id'>아이디</label><br>
+        <input type="text" name="userId" id="user-id"><br>
+        <label for="password">비밀번호</label><br>
+        <input type="password" name="password" id="password"><br>
+        <label for="confirm-password">비밀번호 확인</label><br>
+        <input type="password" name="confirm-password" id="confirm-password"><br><br>
+        <input type="submit" value="회원가입">
+    </form>
     <script>
-        class Person {
-            constructor(name, age) {
-                this._age = 0;
-                this.name = name;
-                this.age = age;
+        const form = document.querySelector('#sign-up');
+
+        form.onsubmit = function () {
+            try {
+                const userJSON = formToJSON();
+                alert(userJSON);
+                // userJSON 을 서버로 보내는 코드
+            } catch (e) {
+                alert(e.message);
+                return false;
+            }
+        };
+
+        function formToJSON() {
+            const userId = document.querySelector('#user-id').value;
+            const password = document.querySelector('#password').value;
+            const confirmPassword = document.querySelector('#confirm-password').value;
+
+            if (!userId.trim()) {
+                throw (new Error('아이디를 입력해주세요.'));
+            } else if (!password) {
+                throw (new Error('비밀번호를 입력해주세요.'));
+            } else if (password !== confirmPassword) {
+                throw (new Error('비밀번호가 일치하지 않습니다.'));
             }
 
-            set age(age) {
-                if (age >= 0) {
-                    this.age = age;
-                } else {
-                    throw "잘못된 나이입니다.";
-                }
-            }
-
-            get age() {
-                return this._age;
-            }
-        }
-
-        try {
-            const hong = new Person("홍길동", -10);
-            document.write(hong.name);
-            document.write(hong.age);
-        } catch (e) {
-            document.write(e);
+            return JSON.stringify({ userId, password });
         }
     </script>
 </body>
