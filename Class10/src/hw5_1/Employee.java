@@ -11,6 +11,19 @@ class Employee {
 	private int employeeID;
 	private String Department;
 	private String employeeClass;
+	private int score;
+	
+	// 모든 외부 클래스에서 접근 가능한 메소드 추가.
+	// 승진 점수 추가 또는 삭감.
+	
+	public void AddScroe(int value) {
+		score += value;
+	}
+	
+	public void SubScore(int value) {
+		score -= value;
+	}
+	
 	
 	public String getEmployeeKorName() {
 		return employeeKorName;
@@ -50,5 +63,15 @@ class Employee {
 	
 	public void setEmployeeClass(String employeeClass) {
 		this.employeeClass = employeeClass;
+	}
+
+
+	public int getScore() {
+		return score;
+	}
+
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 }
