@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Throw로 예외 발생시키기</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this._age = 0;
+                this.name = name;
+                this.age = age;
+            }
+
+            set age(age) {
+                if (age >= 0) {
+                    this.age = age;
+                } else {
+                    throw "잘못된 나이입니다.";
+                }
+            }
+
+            get age() {
+                return this._age;
+            }
+        }
+
+        try {
+            const hong = new Person("홍길동", -10);
+            document.write(hong.name);
+            document.write(hong.age);
+        } catch (e) {
+            document.write(e);
+        }
+    </script>
+</body>
+
+</html>
