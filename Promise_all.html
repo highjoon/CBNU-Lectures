@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promise.all 사용 예제</title>
+</head>
+
+<body>
+    <script>
+        const users = [{ id: 1, name: '임꺽정', username: 'lim' }, { id: 2, name: '홍길동', username: 'hong' }];
+        const scores = [{ userId: 1, score: 80 }, { userId: 2, score: 70 }];
+
+        function findUserbyUsername(username, cb) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const user = users.find(u => u.username === username);
+                    !user ? reject(new Error('User Not Found')) : resolve(user);
+                }, 100);
+            });
+        }
+
+        function findScoreByUserId(userId, cb) {
+            return new Promise((resolve, reject) =>
+                setTimeout(() => {
+                    const score = scores.find(s => s.userId === userId);
+                    !score ? reject(new Error('Not Found')) : resolve(score);
+                }, 200)
+            );
+        }
+
+        Promise.all([findUserbyUsername('lim'), findUserbyUsername('hong')])
+            .then(users => {
+                console.log('setp1 result:::', users);
+
+                // [findScoreByUserId(users[0].id), findScoreByuserId(users[1].id)]
+                return Promise.all(users.map(u => findScoreByUserId(u.id)))
+            })
+            .then(scores => console.log(scores))
+            .catch(err => console.error(err.message));
+    </script>
+
+</body>
+
+</html>
