@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Async/await 함수 Promise와 함께 사용</title>
+</head>
+
+<body>
+    <script>
+        function asyncA() {
+            return new Promise((resolve, reject) => { });
+        }
+
+        const promise = new Promise((resolve, reject) => { });
+
+        async function asyncB() {
+            const response = await fetch();
+            // response 처리
+            return result;
+        }
+
+        async function asyncC() { };
+
+        async function asyncTask() {
+            const results = await Promise.all([asyncA(), asyncB()]);
+            const result1 = await promise;
+            const result2 = await asyncC();
+        }
+
+        asyncTask();
+    </script>
+</body>
+
+</html>
