@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Async/await 주소 API 실습</title>
+</head>
+
+<body>
+    <h1>주소 검색</h1>
+    <form id="form">
+        <input type="text" name="keyword" id="keyword" placeholder="검색어 입력">
+        <button type="submit">검색</button>
+    </form>
+    <ul id="address-list"></ul>
+    <script>
+        const API_URL = 'http://www.juso.go.kr/addrlink/addrLinkApiJsonp.do';
+        const API_KEY = 'devU01TX0FVVEgyMDIwMTIwMzAzMjEwNjExMDQ5NTE=';
+        const form = document.querySelector('#form');
+        const addressList = document.querySelector('#address-list');
+
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            const keyword = encodeURIComponent(form.keyword.value);
+            try {
+                const response = await search(keyword);
+                const txt = await response.text();
+                const results = JSON.parse(txt.replace(/^\(/, '').replace(/\)$/, '')).results;
+                display(results);
+                form.reset();
+            } catch (e) {
+                console.error(e);
+            }
+        }); function search(keyword, currentPage = 1, countPerPage = 10) {
+            const data = {
+                confmKey: API_KEY,
+                keyword,
+                currentPage,
+                countPerPage,
+                resultType: 'json'
+            };
+
+            const body = Object.keys(data).map(key => `${key}=${data[key]}`).join('&');
+
+            const options = {
+                method: 'POST',
+                body,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                }
+            };
+
+            return fetch(API_URL, options);
+        }
+
+        function display(results) {
+            addressList.innerHTML = '';
+            results.juso.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `${item.zipNo}) ${item.roadAddr}`;
+                addressList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+
+</html>
