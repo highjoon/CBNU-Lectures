@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>웹페이지 레이아웃 업데이트 과제</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="/images/seoul_title.png" rel="shortcut icon" type="image/x-icon">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="https://www.seoul.go.kr/" target="_blank">
+                <img src="/images/seoul_logo.png" id="logo">
+            </a>
+            <a href="https://www.seoul.go.kr/seoul/seoul.do" target="blank" id="menu">
+                서울소개
+            </a>
+            <a href="https://korean.visitseoul.net/index" target="_blank" id="menu">
+                VisitSeoul 방문
+            </a>
+            <a href="https://www.seoul.go.kr/coronaV/coronaStatus.do" target="_blank" id="menu">
+                서울 코로나19 동향
+            </a>
+        </header>
+
+        <main>
+            <div class="mainTitle">
+                <h2>See You in Seoul</h2>
+                <p>서울에서 만나요</p>
+                <a href="https://www.seoul.go.kr/main/index.jsp" class="view en">홈페이지 방문 <i
+                        class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </main>
+
+        <section class="about">
+            <div class="title en">
+                <h2 class="en">ABOUT Seoul <span>.</span></h2>
+                <p>대한민국의 수도, 서울특별시를 소개합니다.</p>
+            </div>
+            <ul>
+                <li>
+                    <p class="img">
+                        <img src="/images/seoul1.png" alt="회사소개">
+                    </p>
+                    <div class="text">
+                        <h3>사람과 사람 사이 서울이 있습니다</h3>
+                        <p>
+                            사람과 사람 사이 서울이 있습니다
+                            나와 당신, 시민과 시민, 시민과 세계인...모든 관계의 중심에 서울이 있습니다. <br>
+                            다양한 세대와 국적,산과 강, 고궁과 마천루 등 이질적인 모든 것이 조화롭게 공존하는 도시·서울입니다.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <p class="img">
+                        <img src="/images/seoul2.png" alt="회사소개">
+                    </p>
+                    <div class="text">
+                        <h3>열정과 여유, 두점의 중심은 서울입니다</h3>
+                        <p>나(I)의 옆에 열정을 상징하는 붉은 점이 있습니다. <br>
+                            당신(U) 옆에 여유를 상징하는 푸른 점이 있습니다. <br>
+                            나의 뜨거운 열정에서 당신의 차분한 여유까지 모든 것이 <br>조화롭게 공존하며 어울리는 중심에 서울이 있습니다.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p class="img">
+                        <img src="/images/seoul3.png" alt="회사소개">
+                    </p>
+                    <div class="text">
+                        <h3>한글 '이응' 과 영문 'O'가 공존합니다</h3>
+                        <p>'SEOUL'의 '영문 O'을 '서울'의 '이응'으로 대체하여 대한민국의 자부심을 담으면서, 서울과 세계의 공존을 표현했습니다. <br>
+                            '이응'은 한국의 전통 문고리 모양이기도 하여, 나와 당신이 서울의 문을 열고, 함께 가자는 의미도 내포되어 있습니다.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <aside>
+            <div class="title en">
+                <h2 class="en">VISIT Seoul <span>.</span></h2>
+                <p>다양한 서울을 느껴보세요.</p>
+            </div>
+            <ul>
+                <li>
+                    <p class="img">
+                        <img src="/images/gyeongbokgung.png" alt="회사소개">
+                    </p>
+                    <!-- <div class="map" id="gbk_map"></div> -->
+                    <div class="text">
+                        <h3>조선의 으뜸궁궐 경복궁을 느껴보세요</h3>
+                    </div>
+                </li>
+
+                <li>
+                    <p class="img">
+                        <img src="/images/bluehouse.png" alt="회사소개">
+                    </p>
+                    <!-- <div class="map" id="bh_map"></div> -->
+                    <div class="text">
+                        <h3>정부와 국가를 대표하는 한국의 얼굴, <br> 청와대입니다.</h3>
+                    </div>
+                </li>
+                <li>
+                    <p class="img">
+                        <img src="/images/lottetower.png" alt="회사소개">
+                    </p>
+                    <!-- <div class="map" id="lt_map"></div> -->
+                    <div class="text">
+                        <h3>123층, 555M 거대한 수직도시 <br> 롯데월드타워!</h3>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <content>
+            <div class="title en">
+                <h2 class="en">LOCATION <span>.</span></h2>
+                <p>오시는 길</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="map" id="gbk_map"></div>
+                    <div class="text">
+                        <h3>경복궁</h3>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> 서울특별시 종로구 사직로 161번지</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="map" id="bh_map"></div>
+                    <div class="text">
+                        <h3>청와대</h3>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> 서울특별시 종로구 세종로 사직로 161</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="map" id="lt_map"></div>
+                    <div class="text">
+                        <h3>롯데월드타워</h3>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> 서울특별시 송파구 잠실6동 올림픽로 300</p>
+                    </div>
+                </li>
+            </ul>
+        </content>
+
+        <footer>
+            <p>Copyright &copy;</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=abe954ba1f7bbc97c3bc32366c22e89b"></script>
+    <script type="text/javascript" src="/js/map.js">
+
+    </script>
+</body>
+
+</html>

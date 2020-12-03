@@ -1,0 +1,465 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css');
+@font-face {
+    font-family: 'HansCali';
+    src: url(../fonts/HanS_Calli.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'SeoulHan';
+    src: url(../fonts/seoulhangang.ttf) format('truetype');
+}
+
+/* Layout */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {
+    margin: 0; 
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; 
+    font-size: inherit;
+}
+
+p {
+    text-align: justify center;
+}
+
+.en {
+    font-family: 'Exo 2', sans-serif;}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 14px;
+}
+
+a {
+    color: inherit; 
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+h2 {
+    font-size: 50px;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+address, em, i {
+    font-style: normal;
+}
+
+/* .title*/
+
+.title {
+    color: #000; 
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 45px; 
+    margin-bottom: 5px; 
+    font-weight: normal;
+}
+
+.title h2 span {
+    color: rgb(3, 130, 200); 
+}
+
+.title p {
+    font-size: 18px; 
+    color: #555;
+}
+
+/* Image Hover Animation */
+
+a#items {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'SeoulHan';
+    padding: 0 0;
+}
+
+a#items:visited {
+    text-decoration: none;
+}
+
+a#items:hover {
+    text-decoration: none;
+}
+
+a#items > .bar {
+    width: 0px;
+    height: 0px;
+    background: #fff;
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+a#items:hover > .bar {
+    width: 90%;
+    height: 80%;
+}
+
+a#items:hover > .bar > p {
+    margin: 5%;
+    color: black;
+}
+
+/* .container */
+
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header ." 
+    "main main main" 
+    "section section section" 
+    "aside aside aside" 
+    "content content content"
+    "footer footer footer";
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    grid-area: header;
+    grid-column: span 3;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+header #logo {
+    width: 50%;
+    height: 50px;
+    padding: 0;
+}
+
+header #menu {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: 'SeoulHan';
+}
+
+header #menu:visited {
+    text-decoration: none;
+}
+
+header #menu:hover {
+    text-decoration: none;
+}
+
+header > a > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* main */
+
+main {
+    grid-area: main;
+    grid-column: span 3;
+    width: 100%;
+    height: 100vh;
+    background: url(/images/main.png) no-repeat center/cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    font-family: 'HansCali';
+}
+
+main .mainTitle {
+    position: absolute; 
+    top: 25%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    text-shadow: 0 0 5px rgba(8, 8, 8, 0.5); 
+    animation-name: mainTitle; 
+    animation-duration: 1s;
+    font-family: 'HansCali';
+}
+
+main .mainTitle h2 { 
+    font-size: 100px; 
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+main .mainTitle p {
+    font-size: 55px; 
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+main .mainTitle .view {
+    display: block; 
+    width: 180px; 
+    margin: 0 auto; 
+    padding: 8px 0;
+    font-size:15px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    border: 1px solid #fff; 
+    border-radius: 40px; 
+    position: relative; 
+    overflow: hidden;
+    color: #fff;
+}
+
+main .mainTitle .view:after {
+    content: ''; 
+    width:0; 
+    height: 100%; 
+    background: rgba(255, 255, 255, 0.4); 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+}
+
+main .mainTitle .view:hover:after {
+    width: 100%; 
+    transition: all 0.3s;
+}
+
+/* Banner Animation */
+
+@keyframes banner-content {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+/* MainTitle Animation */
+
+@keyframes mainTitle {
+    0%{opacity: 0; top: 50%;}
+    30%{opacity: 0; top: 30%;}
+    100%{opacity: 1; top: 25%;}    
+}
+
+/*section.about*/
+
+section.about {
+    grid-area: section;
+    grid-column: span 3;
+    width: 80%;
+    height: auto;
+    padding-right: 20px;
+    background: #fff; 
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+section.about > p {
+    font-size: 30px;
+}
+
+section.about ul {
+    margin: 30px auto; 
+    width: 100%; 
+    border-bottom: 1px solid #ddd; 
+    overflow: hidden; 
+}
+
+section.about ul li {
+    float:left; 
+    width: 33.3333%;
+    height: 100%;
+    margin: 0 auto;
+    display: block; 
+}
+
+section.about ul li p.img {
+    width: 100%;
+    overflow: hidden; 
+}
+
+section.about ul li p.img img {
+    width: 100%; 
+    height: auto; 
+    transition: all 0.8s;
+}
+
+section.about ul li:hover p.img img {
+    transform: scale(1.2); 
+    transition: all 1s;
+}
+
+section.about ul li .text {
+    padding: 30px;
+}
+
+section.about ul li .text h3 {
+    font-size: 25px; 
+    margin-bottom: 10px;
+}
+
+section.about ul li p {
+    font-size: 16px; 
+    margin-bottom: 10px;
+}
+
+/* aside */
+
+aside {
+    grid-area: aside;
+    grid-column: span 3;
+    width: 80%;
+    height: auto;
+    padding-right: 20px;
+    background: #fff; 
+    padding: 80px 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+}
+
+aside > p {
+    font-size: 30px;
+}
+
+aside ul {
+    margin: 30px auto; 
+    width: 100%; 
+    overflow: hidden; 
+}
+
+aside ul li {
+    float:left; 
+    width: 32%;
+    height: 100%;
+    margin: 0 10px;
+    display: block; 
+}
+
+aside ul li .map {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+aside ul li p.img {
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 20px;
+}
+
+aside ul li p.img img {
+    width: 100%; 
+    height: 300px; 
+    transition: all 0.8s;
+    border-radius: 20px;
+}
+
+aside ul li:hover p.img img {
+    transform: scale(1.2); 
+    transition: all 1s;
+    border-radius: 20px;
+}
+
+aside ul li .text {
+    padding: 30px;
+}
+
+aside ul li .text h3 {
+    font-size: 25px; 
+    margin-bottom: 10px;
+}
+
+aside ul li p {
+    font-size: 16px; 
+    margin-bottom: 10px;
+}
+
+/* content */
+
+content {
+    grid-area: content;
+    grid-column: span 3;
+    width: 80%;
+    height: auto;
+    padding-right: 20px;
+    background: #fff; 
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+content > p {
+    font-size: 30px;
+}
+
+content ul {
+    margin: 30px auto; 
+    width: 100%; 
+    overflow: hidden; 
+}
+
+content ul li {
+    float:left; 
+    width: 32%;
+    height: 100%;
+    margin: 0 10px;
+    display: block; 
+}
+
+content ul li .map {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+content ul li .text {
+    padding: 30px;
+}
+
+content ul li .text h3 {
+    font-size: 25px; 
+    margin-bottom: 10px;
+}
+
+content ul li p {
+    font-size: 16px; 
+    margin-bottom: 10px;
+}
+
+/* footer */
+
+footer {
+    grid-area: footer;
+    width: 80%;
+    height: 15vh;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #ddd; 
+}
+
+footer p {
+    font-style: italic;
+    font-size: 20px;
+    height: 10%;
+    line-height: 7;
+}
