@@ -1,4 +1,4 @@
-package edu.cbnu.Multiple_inheritance;
+package edu.cbnu.multiple_inheritance;
 
  interface Car {																		// Car 인터페이스 생성.
 	 abstract void work();														// 모두 추상 메소드이므로 abstract는 생략 가능.

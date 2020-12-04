@@ -1,4 +1,4 @@
-package edu.cbnu.Multiple_inheritance;
+package edu.cbnu.multiple_inheritance;
 
 public class TankTest {
 
