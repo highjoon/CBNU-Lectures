@@ -1,4 +1,4 @@
-package edu.cbnu.gui;
+package edu.cbnu.jframe;
 
 import javax.swing.*;																							// 스윙 클래스들은 javax.swing 패키지 안에 들어있음.
 
