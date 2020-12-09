@@ -6,7 +6,7 @@ cur.execute("CREATE TABLE  IF NOT EXISTS Company (Cname varchar(20), City varcha
 cur.execute("CREATE TABLE  IF NOT EXISTS Customer (PersonID varchar(20), LastName varchar(20), FirstName varchar(20), Salary varchar(20), Company varchar(20));")
 
 companyList = (
-    ("Samsumg", "Seoul", '123-3456'),
+    ("Samsung", "Seoul", '123-3456'),
     ("Hyundai", "Busan", '345-4567')
 )
 
