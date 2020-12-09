@@ -11,5 +11,6 @@ plt.title("Stem Plot")
 # use_line_collection : 중간에 가로축 길게 그리기
 # -.  :  선 모양
 # np.cos(x) : x의 코사인 값
+# 좌표 설정
 plt.stem(x, np.cos(x), '-.', use_line_collection=True)
 plt.show()
