@@ -1,5 +1,5 @@
 import sqlite3
-con = sqlite3.connect("testDB")
+con = sqlite3.connect("testDB.db")
 cur = con.cursor()
 cur.execute("DROP TABLE IF EXISTS jejutourist;")
 cur.execute("create table jejutourist(\
@@ -24,5 +24,5 @@ cur.execute("create table jejutourist(\
  f_thailand int,\
  f_usa int)"
 )
-print("DB table created !")
+print("DB 테이블 생성 완료 !")
 con.commit()
