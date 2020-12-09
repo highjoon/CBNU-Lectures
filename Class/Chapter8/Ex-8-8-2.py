@@ -2,7 +2,7 @@
 
 import matplotlib.pyplot as plt
 
-# 방법 2 : 각각 plt.title(), plt.xlabel(), plt.ylabel()에 기입함.
+# 방법 2 : 각각 set_title(), set_xlabel(), set_ylabel()에 기입함.
 fig, ax = plt.subplots(1,1)
 ax.plot([1,2,3], [1,2,3])
 ax.set_title("Graph Title")
