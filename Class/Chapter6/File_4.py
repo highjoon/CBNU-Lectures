@@ -1,4 +1,7 @@
+import os.path
+
 infile = open("C:\\Pythonsource\\Class\\CBNU_Advanced_Business_Programming\\Class\\Chapter6\\sales.txt", 'r')
+outfile = open("C:\\Pythonsource\\Class\\CBNU_Advanced_Business_Programming\\Class\\Chapter6\\result.txt", 'w')
 sum = 0
 line = infile.readlines()
 line = list(map(float, line))
@@ -10,6 +13,8 @@ for i in line:
 
 avg = sum / num
 
-print("-------- 매출 보고서 --------")
-print("총 매출 =", int(sum))
-print("평균 일매출 =", avg)
+outfile.write("-------- 매출 보고서 --------" + '\n')
+outfile.write("총 매출 = " + str(int(sum)) + '\n')
+outfile.write("평균 일매출 =" + str(avg) + '\n')
+infile.close()
+outfile.close()
