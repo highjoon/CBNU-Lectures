@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 
 # fig : 전체 그래프 (1개)
 # ax : 서브 그래프 (3개)
-# 1행 3열로 서브 그래프들을 그린다.
+# 1행 4열로 서브 그래프들을 그린다.
+# figsize : 그래프의 크기나 세로-가로 비율 (가로 20인치, 세로 5인치)
 fig, ax = plt.subplots(1,4, figsize=(20,5))
 
 # matplotlib에 정의된 색상을 지정
