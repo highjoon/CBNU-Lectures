@@ -1,4 +1,4 @@
-# Stem Plot
+# Histogram
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -11,7 +11,7 @@ x = np.random.randn(1000)
 plt.title("Histogram")
 
 # arrays : 데이터를 넣고자하는 x축.
-# bins : 해당 막대의 영역을 얼마나 채우는지 표시.
+# bins : 해당 막대의 영역을 얼마나 채우는지 표시. (생성되는 막대의 개수라고 볼 수 있음)
 
 arrays, bins, patches = plt.hist(x, bins=10)
 plt.show()
