@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/public/css/main.css"> 
+        {% block css %}{% endblock %}
+        </head>
+
+        <body>
+            <header>
+                <h1>Express Example</h1>
+                <a href="/additional">추가 페이지</a>
+            </header>
+
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+
+            <footer>
+                <p>Copyright &copy;</p>
+            </footer>
+        </body>
+
+    </html>
