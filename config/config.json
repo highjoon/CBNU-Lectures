@@ -5,7 +5,7 @@
     "database": "auction",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": "3050"
+    "port": "3306"
   },
   "test": {
     "username": "root",
@@ -28,7 +28,7 @@
     "password": "5e684666"
   },
   "server": {
-    "port": 3306
+    "port": "3306"
   },
   "app": {
     "layouts": true,
