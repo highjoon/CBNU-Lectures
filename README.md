@@ -6,7 +6,7 @@ HTML, CSS, JavaScript, Node.js (Express), DB를 응용하여 <br>
 # 2. 주요 기능 설명
 Node.js (Express)와 MySQL을 활용하여 <br>
 실시간으로 경매가 이루어지는 웹사이트를 제작하였습니다.<br><br>
-<a href="#"><img src="./images/전체.jpg" width="400px" height="200px" alt="전체페이지"></a>
+<a href="#"><img src="./images/전체.jpg" width="500px" height="500px" alt="전체페이지"></a>
 
 1. **HTML, CSS 활용하여 레이아웃 작성**
     - Flex, Grid 사용.
@@ -18,7 +18,7 @@ Node.js (Express)와 MySQL을 활용하여 <br>
     - 경매 상품 표시 기능.
         - table 속성을 통해 경매 진행 목록을 표시하였습니다.
         - 표시되는 내용은 상품명, 이미지, 시작가격, 종료시간, 해당 방으로 입장 버튼 입니다. <br>
-        <a href="#"><img src="./images/경매진행목록.jpg" width="400px" height="200px" alt="경매진행목록"></a>
+        <a href="#"><img src="./images/경매진행목록.jpg" width="500px" height="500px" alt="경매진행목록"></a>
     <br>
     - views 파일 작성.
         - views 폴더에 layout.html, main.html, join.html, good.html, aunction.html 을 작성하였습니다.
@@ -37,7 +37,7 @@ Node.js (Express)와 MySQL을 활용하여 <br>
         - cookie-parserm, dotenv, express, express-session, morgan, multer, nunjucks, bcrypt, node-schedule, passport, passport-local, socket.it, sse를 설치하였습니다.
         - MySQL 사용을 위해 sequelize, sequelize-cli, mysql2 패키지를 설치하였고,
         ```npx sequelize init```으로 기본 Directory를 생성하였습니다.<br>
-    <a href="#"><img src="./images/package_json.png" width="150px" height="200px" alt="package.json"></a>
+    <a href="#"><img src="./images/package_json.png" width="150px" height="500px" alt="package.json"></a>
         - config.json에 MySQL 데이터베이스 설정을 작성하였습니다.
     <br>
     - **모델 작성.**
@@ -60,7 +60,7 @@ Node.js (Express)와 MySQL을 활용하여 <br>
         - Passport 패키지를 통해 email과 password로 로그인 할 수 있으며, 비밀번호가 일치하지 않거나 가입되지 않은 회원일 경우 로그인이 불가능합니다.
         - 또한 bcrypt 패키지를 통해 각 회원의 비밀번호는 암호화되어 저장됩니다.
         <br><br>
-        <a href="#"><img src="./images/로그인실패.png" width="400px" height="200px" alt="로그인실패"></a>
+        <a href="#"><img src="./images/로그인실패.png" width="400px" height="500px" alt="로그인실패"></a>
         <br><br>
     - **.env 작성.**
         - .env 파일에서 COOKIE_SECRET 을 통해 쿠키 비밀키를 입력했습니다.
@@ -82,7 +82,7 @@ Node.js (Express)와 MySQL을 활용하여 <br>
             - 상품 이미지 업로드를 위해 multer 패키지를 사용하였습니다.
             - 이미지는 5 * 1024 * 1024로 제한되어 업로드됩니다.
         <br><br>
-        <a href="#"><img src="./images/상품등록.png" width="400px" height="200px" alt="상품등록"></a>
+        <a href="#"><img src="./images/상품등록.png" width="400px" height="500px" alt="상품등록"></a>
         <br><br>
         - GET /good/:id : 해당 상품과 기존 입찰 정보들을 불러온 뒤 렌더링합니다.
         - POST /good/:id/bid : 클라이언트로부터 받은 입찰 정보를 저장합니다. 추후 기술할 여러가지 제한이 여기서 이루어집니다.
@@ -95,12 +95,12 @@ Node.js (Express)와 MySQL을 활용하여 <br>
         - 여러가지 제한을 부여하는 라우터를 작성했습니다.
             - 입찰 가격은 시작 가격보다 높아야합니다.
         <br><br>
-        <a href="#"><img src="./images/낮은금액입찰2.png" width="400px" height="200px" alt="낮은금액입찰"></a>
+        <a href="#"><img src="./images/낮은금액입찰2.png" width="400px" height="500px" alt="낮은금액입찰"></a>
         <br><br>
             - 경매는 24시간동안 진행됩니다.
             - 직전의 입찰보다 더 높은 금액의 입찰가를 제시해야합니다.
         <br><br>    
-        <a href="#"><img src="./images/낮은금액입찰.png" width="400px" height="200px" alt="낮은금액입찰"></a>
+        <a href="#"><img src="./images/낮은금액입찰.png" width="400px" height="500px" alt="낮은금액입찰"></a>
         <br><br>
             - 모든 입찰 과정이 끝나면 경매 내역은 저장됩니다.
         <br>
@@ -117,13 +117,13 @@ Node.js (Express)와 MySQL을 활용하여 <br>
             - roomId는 good(상품) 테이블의 Raw id 입니다.
         - socket.on('disconnect') : 경배방에서 퇴장했을 때의 소켓입니다.
     <br><br>
-    <a href="#"><img src="./images/실시간경매.jpg" width="400px" height="200px" alt="실시간경매"></a>
+    <a href="#"><img src="./images/실시간경매.jpg" width="400px" height="500px" alt="실시간경매"></a>
     <br>
 # 3. 결과
 전체 페이지 캡처입니다.
 <br><br>
-<a href="#"><img src="./images/전체1.png" width="400px" height="200px" alt="전체페이지1"></a><br><br>
-<a href="#"><img src="./images/전체2.png" width="400px" height="200px" alt="전체페이지2"></a><br><br>
-<a href="#"><img src="./images/전체3.png" width="400px" height="200px" alt="전체페이지3"></a><br><br>
-<a href="#"><img src="./images/전체4.png" width="400px" height="200px" alt="전체페이지4"></a><br><br>
-<a href="#"><img src="./images/전체5.png" width="400px" height="200px" alt="전체페이지5"></a><br><br>
+<a href="#"><img src="./images/전체1.png" width="400px" height="500px" alt="전체페이지1"></a><br><br>
+<a href="#"><img src="./images/전체2.png" width="400px" height="500px" alt="전체페이지2"></a><br><br>
+<a href="#"><img src="./images/전체3.png" width="400px" height="500px" alt="전체페이지3"></a><br><br>
+<a href="#"><img src="./images/전체4.png" width="400px" height="500px" alt="전체페이지4"></a><br><br>
+<a href="#"><img src="./images/전체5.png" width="400px" height="500px" alt="전체페이지5"></a><br><br>
