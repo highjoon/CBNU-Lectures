@@ -23,7 +23,7 @@ passportConfig();
 // 서버를 재부팅하더라도 경매 항목이 유지되도록 checkAuction 모듈을 통해 설정
 checkAuction();
 
-app.set('port', process.env.PORT || 8010);
+app.set('port', process.env.PORT || 3050);
 app.set('view engine', 'html');
 nunjucks.configure('views', {
     express: app,
