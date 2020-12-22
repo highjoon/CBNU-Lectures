@@ -1,21 +1,20 @@
-import express, { static, json, urlencoded } from 'express';
-const PORT = process.env.PORT;
-import { join } from 'path';
-import morgan from 'morgan';
-import cookieParser from 'cookie-parser';
-import session from 'express-session';
-import { initialize, session as _session } from 'passport';
-import { configure } from 'nunjucks';
-import { config } from 'dotenv';
+const express = require('express');
+const path = require('path');
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
+const nunjucks = require('nunjucks');
+const dotenv = require('dotenv');
 
-config();
-import indexRouter from './routes/index';
-import authRouter from './routes/auth';
-import { sequelize } from './models';
-import passportConfig from './passport';
-import webSocket from './socket';
-import sse from './sse';
-import checkAuction from './checkAuction';
+dotenv.config();
+const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
+const {sequelize} = require('./models');
+const passportConfig = require('./passport');
+const webSocket = require('./socket');
+const sse = require('./sse');
+const checkAuction = require('./checkAuction');
 
 const app = express();
 passportConfig();
@@ -25,7 +24,7 @@ checkAuction();
 
 app.set('port', process.env.PORT || 3050);
 app.set('view engine', 'html');
-configure('views', {
+nunjucks.configure('views', {
     express: app,
     watch: true
 });
@@ -46,14 +45,14 @@ const sessionMiddleware = session({
 });
 
 app.use(morgan('dev'));
-app.use(static(join(__dirname, 'public')));
-app.use('/img', static(join(__dirname, 'uploads')));
-app.use(json());
-app.use(urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/img', express.static(path.join(__dirname, 'uploads')));
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(sessionMiddleware);
-app.use(initialize());
-app.use(_session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
