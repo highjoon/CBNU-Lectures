@@ -21,7 +21,7 @@ router.get('/', async (req, res, next) => {
   try {
     const goods = await Good.findAll({ where: { SoldId: null } });
     res.render('main', {
-      title: 'NodeAuction',
+      title: 'Auction',
       goods,
     });
   } catch (error) {
@@ -33,13 +33,13 @@ router.get('/', async (req, res, next) => {
 // 회원가입 페이지 라우터
 router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', {
-    title: '회원가입 - NodeAuction',
+    title: '회원가입 - Auction',
   });
 });
 
 // 상품 등록 라우터
 router.get('/good', isLoggedIn, (req, res) => {
-  res.render('good', { title: '상품 등록 - NodeAuction' });
+  res.render('good', { title: '상품 등록 - Auction' });
 });
 
 // 상품 업로드 라우터.
@@ -76,11 +76,11 @@ router.post('/good', isLoggedIn, upload.single('img'), async (req, res, next) =>
       price,
     });
     const end = new Date();
-    end.setDate(end.getDate() + 1); // 하루 뒤 (24시간 뒤)
-    // 24시간 뒤에 함수 호출
+    end.setDate(end.getDate() + 1); // 1시간 뒤
+    // 1시간 뒤에 함수 호출
     schedule.scheduleJob(end, async () => {
-        // 절차 중 일부는 진행되고, 일부는 오류로 진행되지 않는 불상사를 방지하기 위해 SQL 중 where에 transaction 설정
-        const t = await sequelize.transaction();
+      // 절차 중 일부는 진행되고, 일부는 오류로 진행되지 않는 불상사를 방지하기 위해 SQL 중 where에 transaction 설정
+      const t = await sequelize.transaction();
       try {
         // 상품 경매 내역 출력
         const success = await Auction.findOne({
@@ -90,7 +90,7 @@ router.post('/good', isLoggedIn, upload.single('img'), async (req, res, next) =>
           transaction: t
         });
         // 낙찰자 Id에는 입찰자 Id 입력
-        await Good.update({ SoldId: success.UserId }, { where: { id: good.id } , transaction: t });
+        await Good.update({ SoldId: success.UserId }, { where: { id: good.id }, transaction: t });
         // 사용자 잔액에서 낙찰한 금액만큼 차감 (sequelize.literal)
         await User.update({
           money: sequelize.literal(`money - ${success.bid}`),
@@ -132,7 +132,7 @@ router.get('/good/:id', isLoggedIn, async (req, res, next) => {
       }),
     ]);
     res.render('auction', {
-      title: `${good.name} - NodeAuction`,
+      title: `${good.name} - Auction`,
       good,
       auction,
     });
@@ -151,14 +151,14 @@ router.post('/good/:id/bid', isLoggedIn, async (req, res, next) => {
       include: { model: Auction },
       order: [[{ model: Auction }, 'bid', 'DESC']],
     });
-    // 상품 가격보다 입찰가가 높아야한다는 제한
+    // 시작 가격보다 입찰가가 높아야한다는 제한
     if (good.price >= bid) {
       return res.status(403).send('시작 가격보다 높게 입찰해야 합니다.');
     }
 
     // 경매 종료 여부 확인 (24시간이 지났는지? 24간 안에 입찰되었는지?)
-    // 경매는 1시간 동안 진행되도록 설정 (1000 * 60 * 60)
-    if (new Date(good.createdAt).valueOf() + (1000 * 60 * 60) < new Date()) {
+    // 경매는 24시간 동안 진행되도록 설정 (1000 * 60 * 60 * 24)
+    if (new Date(good.createdAt).valueOf() + (1000 * 60 * 60 * 24) < new Date()) {
       return res.status(403).send('경매가 이미 종료되었습니다');
     }
 
@@ -197,7 +197,7 @@ router.get('/list', isLoggedIn, async (req, res, next) => {
       include: { model: Auction },
       order: [[{ model: Auction }, 'bid', 'DESC']],
     });
-    res.render('list', { title: '낙찰 목록 - NodeAuction', goods });
+    res.render('list', { title: '낙찰 목록 - Auction', goods });
   } catch (error) {
     console.error(error);
     next(error);
