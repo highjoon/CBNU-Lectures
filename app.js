@@ -9,13 +9,13 @@ const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
 
 dotenv.config();
-const indexRouter = require('/routes/index');
-const authRouter = require('/routes/auth');
-const {sequelize} = require('/models');
-const passportConfig = require('/passport');
-const webSocket = require('/socket');
-const sse = require('/sse');
-const checkAuction = require('/checkAuction');
+const indexRouter = require('routes/index');
+const authRouter = require('routes/auth');
+const {sequelize} = require('models');
+const passportConfig = require('passport');
+const webSocket = require('socket');
+const sse = require('sse');
+const checkAuction = require('checkAuction');
 
 const app = express();
 passportConfig();
