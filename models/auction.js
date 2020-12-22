@@ -1,15 +1,15 @@
-const Sequelize = require('sequelize');
+const sequelize = require('sequelize');
 
-module.exports = class Auction extends Sequelize.Model {
+module.exports = class Auction extends sequelize.Model {
   static init(sequelize) {
     return super.init({
       bid: {
-        type: Sequelize.INTEGER,
+        type: sequelize.INTEGER,
         allowNull: false,
         defaultValue: 0,
       },
       msg: {
-        type: Sequelize.STRING(100),
+        type: sequelize.STRING(100),
         allowNull: true,
       },
     }, {

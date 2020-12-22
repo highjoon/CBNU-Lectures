@@ -1,18 +1,18 @@
-const Sequelize = require('sequelize');
+const sequelize = require('sequelize');
 
-module.exports = class Good extends Sequelize.Model {
+module.exports = class Good extends sequelize.Model {
   static init(sequelize) {
     return super.init({
       name: {
-        type: Sequelize.STRING(40),
+        type: sequelize.STRING(40),
         allowNull: false,
       },
       img: {
-        type: Sequelize.STRING(200),
+        type: sequelize.STRING(200),
         allowNull: true,
       },
       price: {
-        type: Sequelize.INTEGER,
+        type: sequelize.INTEGER,
         allowNull: false,
         defaultValue: 0,
       },
