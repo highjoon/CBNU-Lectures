@@ -26,6 +26,7 @@ print(rows)
 
 # numpy 배열화 (array()와 동작 차이는 없지만 array는 copy=true가 기본이고, asarray는 copy=false가 기본)
 nda = np.asarray(rows)
+print(nda)
 
 # [ 1.  2.  3.  4.  5.  6.  7.  8.  9. 10. 11. 12.]
 x1 = nda[:,0]

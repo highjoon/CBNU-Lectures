@@ -15,21 +15,7 @@ cur.execute("DELETE FROM jejutourist;")
 
 i=0
 while i < wb.nsheets:
-
- # 시트번호(인덱스)로 시트 가져오기
  sh = wb.sheet_by_index(i)
-
- # 시트이름, 행의 개수, 열의 개수
- # print(sh.name, sh.nrows, sh.ncols)
-
- # split :  아무 값도 넣어 주지 않으면 공백(스페이스, 탭, 엔터 등)을 기준으로 문자열을 나누어 준다.
- # a = "Life is too short"
- # a.split()
- # ['Life', 'is', 'too', 'short']
-
- # cell(행, 열)
- # 행, 열은 0 부터 시작.
-
  cur.execute("INSERT INTO jejutourist VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
  ((((str(sh.cell(2,6))).split("'"))[1])[:4],\
   (((str(sh.cell(0,0))).split())[1]).rstrip("월"),\

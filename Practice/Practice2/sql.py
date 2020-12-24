@@ -61,7 +61,7 @@ Sum_individual_package_leisure_month = con.execute(Sum_individual_package_leisur
 
 Num_tourist = con.execute(Num_tourist_sql)
 
-for i in Sum_individual_package_leisure_month:
+for i in Num_tourist:
     print (i)
 
 con.commit()
