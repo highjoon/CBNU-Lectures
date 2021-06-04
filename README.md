@@ -1,6 +1,3 @@
-# wp-html
-웹 응용 프로그래밍 HTML 
-
 # HTML 실습
 
 ## HTML5 기초
