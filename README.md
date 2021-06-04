@@ -14,12 +14,10 @@ Node.js (Express)와 MySQL을 활용하여 <br>
         - ```grid-template-columns: repeat(3, 1fr);```
         - ```grid-template-areas: "header header header" "main main main";```
         - header와 main 섹션으로 레이아웃을 나누었으며, 그 밑에서부터 출력되는 내용은 라우팅에 따라 웹사이트가 이동할 때, CSS가 깨지는 현상이 발생하여 부득이하게 Grid에 포함시키지 않았습니다.
-    <br>
     - 경매 상품 표시 기능.
         - table 속성을 통해 경매 진행 목록을 표시하였습니다.
         - 표시되는 내용은 상품명, 이미지, 시작가격, 종료시간, 해당 방으로 입장 버튼 입니다. <br>
         <a href="#"><img src="./images/경매진행목록.jpg" width="900px" height="900px" alt="경매진행목록"></a>
-    <br>
     - views 파일 작성.
         - views 폴더에 layout.html, main.html, join.html, good.html, aunction.html 을 작성하였습니다.
         - layout.html : 전체적인 레이아웃.
@@ -39,13 +37,11 @@ Node.js (Express)와 MySQL을 활용하여 <br>
         ```npx sequelize init```으로 기본 Directory를 생성하였습니다.<br>
     <a href="#"><img src="./images/package_json.png" width="150px" height="300px" alt="package.json"></a>
         - config.json에 MySQL 데이터베이스 설정을 작성하였습니다.
-    <br>
     - **모델 작성.**
         - Routing을 위해 models폴더에 user.js, good.js, auctions.js 를 작성하였습니다.
         - user.js : 사용자 이메일, 닉네임, 비밀번호와 자금.
         - good.js : 상품의 이름, 사진, 입찰 시작 가격.
         - auction.js : 입찰가 (bid)와 입찰 시 전달할 메시지.
-    <br>
     - **DB 생성 및 관계 설정.**
         - npx sequelize db:create를 통해 auction이라는 이름의 DB를 생성하였습니다.
         - models/index.js에 다음과 같은 내용을 추가하였습니다.
@@ -54,7 +50,6 @@ Node.js (Express)와 MySQL을 활용하여 <br>
         - 한 사용자는 횟수의 제한 없이 경매에 입찰할 수 있습니다.(user-auction)
         - 한 상품에 대해 여러 사용자가 경매 입찰할 수 있습니다. (good-auction)
         - as는 OwnerId, SoldId로써 상품 모델에 Column이 추가됩니다.
-    <br>
     - **Passport 세팅.**
         - 로그인 기능을 구현하기 위해 routes/auth.js, routes/middlewares.js를 작성하여 미들웨어의 기능을 하도록 했습니다.
         - Passport 패키지를 통해 email과 password로 로그인 할 수 있으며, 비밀번호가 일치하지 않거나 가입되지 않은 회원일 경우 로그인이 불가능합니다.
@@ -64,14 +59,12 @@ Node.js (Express)와 MySQL을 활용하여 <br>
         <br><br>
     - **.env 작성.**
         - .env 파일에서 COOKIE_SECRET 을 통해 쿠키 비밀키를 입력했습니다.
-    <br>
     - **app.js 작성.**
         - app.js를 작성하여 메인 구조와 서버 연동 구조를 구축하였습니다.
         - port는 기본 3050으로 설정하였으며 process.env.PORT 를 통해 추후 호스팅할 경우 호스팅의 PORT를 받아오도록 설정하였습니다.
         - sequelize.sync를 통해 MySQL 데이터베이스와 연동하였습니다.
         - cookie가 갖고있는 보안적인 한계를 보완하기 위해 session을 사용하여 데이터를 서버에 저장하도록 하였습니다.
         - error 설정을 통해 해당하는 Router가 없을경우 등에 표시될 에러메시지를 장성하였습니다.
-    <br>
     - **Routing 구축.**
         - routes/index.js를 작성하여 Router를 작성하였습니다.
         - GET / : 메인 페이지 렌더.
