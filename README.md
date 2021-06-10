@@ -26,14 +26,12 @@
         - ``` aside aside aside; ```
         - ``` content content content; ```
         - ``` footer footer footer; ```
-    <br>
     - 시각 효과를 위해 폰트 교체.
         - Noto Sans KR
         - Exo 2
         - 구글폰트에서 import url 적용.
     - 가상요소 사용.
         - ``` main .mainTitle .view:after {content: ''; ...}  ```
-    <br>
 3. **9주차 강의내용 반영.**
     - 카카오 Developers에서 Web Domain 추가 후 JavaScript 키를 부여받아 카카오맵 API 적용.
         - map.js 일부 내용
