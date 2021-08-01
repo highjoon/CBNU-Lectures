@@ -1,0 +1,224 @@
+<html>
+
+<head>
+    <title>Customer Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <meta charset="ISO-8859-1">
+    <!-- Bootstrap -->
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nokora|Roboto" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ionicons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="http://www.denhtlai.com/images/favicon.ico" rel="icon" type="image/ico">
+    <link href="https://formden.com/static/cdn/bootstrap-iso.css" rel="stylesheet">
+    <link href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="css/customer.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../Project/css/core.css">
+    <link href="../Project/css/carousel.css" rel="stylesheet">
+    <link href="../Project/css/blog.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+    <link href="../Project/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body style="padding-top: 0;">
+    <div class="container">
+        <header class="blog-header py-3" style="padding-top: 11.5px; height: 73.050px;">
+            <div class="row flex-nowrap justify-content-between align-items-center" style="height: 57.550px;">
+                <div class="col-4 pt-1">
+                    <!-- <a class="text-muted" href="#">Subscribe</a> -->
+                </div>
+                <div class="col-4 text-center" id="top">
+                    <img src="http://www.denhtlai.com/img/denhtlai-icon.png" style="height: 40px; width: 40px;border-radius: 50%;margin-bottom: 17.500px;">
+                    <a class="blog-header-logo text-dark" href="mainpage.html" style="font-size: 36px; color: black;">DENH TLAI</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="btn btn-sm btn-outline-secondary" href="../Project/Sign_in.html#sign_in" for='#sign_in' target="_blank" style="font-size:14px;padding: 4px 8px 4px 8px;">Sign in</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="../Project/Sign_up.html" for='#sign_up' target="_blank" style="margin-left: 2%;font-size:14px;padding: 4px 8px 4px 8px;">Sign up</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2" style="margin-bottom: 10px;">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 text-muted" href="../Project/denhtlai_phone.html" target="_blank">Phone / Accessories</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_computer.html" target="_blank">Computer / Accessories</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_vehicle.html" target="_blank">Vehicle</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_electronic.html" target="_blank">Electronic</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_cosmetics.html" target="_blank">Cosmetics</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_home_kitchen.html" target="_blank">Home & Kitchen</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_watch.html" target="_blank">Jewellery & Watch</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_shoes.html" target="_blank">Shoes</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_tools.html" target="_blank">Tools</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_coupon.html" target="_blank">Coupon</a>
+                <a class="p-2 text-muted" href="../Project/denhtlai_others.html" target="_blank">Others</a>
+            </nav>
+        </div>
+
+        <div class="main-container" style="background-color: #f0f0f0; min-height: 370px; ">
+            <div class="container">
+
+                <div class="row breadcrumb" style="background-color:rgb(240, 240, 240);">
+                    <div class="col-md-12" style="background-color:rgb(240, 240, 240);">
+                        <h2>Customer Service</h2>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <h3 style="text-align: center; margin-left: 150px;">Contact Us</h3>
+                            <br> <br>
+                            <form class="form-horizontal" id="ContactUsForm" method="POST" name="myForm" action="/contact/send">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"><span>Full Name</span>
+                                <span class="text-danger">*</span>
+                            </label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="full_name" name="full_name" required="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"><span>Phone</span>
+                                <span class="text-danger">*</span>
+                            </label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="phone" name="phone" required="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"><span>Email</span>
+                                <span class="text-danger">*</span>
+                            </label>
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="email" name="email" required="" type="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"><span>Message</span>
+                                <span class="text-danger">*</span>
+                            </label>
+                                    <div class="col-md-9">
+                                        <textarea class="form-control" cols="20" id="message" name="message" required="" rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"></label>
+                                    <div class="col-md-9">
+
+                                        <button class="btn btn-primary pull-right" id="SendMessage" type="submit">
+                                    <span class="glyphicon glyphicon-envelope btnsend"> </span>
+                                    <span>Send</span>
+                                </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <br>
+
+                        <!-- TODO: RIGH SECTION | DENH TLAI -->
+                        <div class="col-xs-12 col-md-6">
+                            <h4>
+                                <strong>
+                            <a href="/index">
+                                <span class="kh-font" style="color: #238FC7; position: relative; left: 240px; top: 30px;">DENH</span>
+                                <span class="kh-font" style="color: #515153; position: relative; left: 240px; top: 30px;">TLAI</span>
+                            </a>
+                        </strong>
+                            </h4>
+                            <div class="pi-col-md-4 pi-col-sm-6 pi-padding-bottom-30" style="position: relative; left: 230px; top: 20px;">
+                                <br>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+                                        <span>Address: #56D1, St 261, Sangkat Boeung Salang, KhanToul Kork, Phnom Penh, Cambodia</span>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="glyphicon glyphicon-earphone"></span></a>
+                                        <span>Tel: (855) 10 51 95 65</span>
+                                    </li>
+                                    <li><span>&nbsp; &nbsp; &nbsp;</span><span>(855) 61 41 95 65</span>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+                                        <span>Email:</span>
+                                        <a href="mailto:info.denhtlai@gmail.com">info.denhtlai@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+            </div>
+        </div>
+
+        <details>
+            <summary style="background-color: #f0f0f0; color: #f0f0f0;border-color: #f0f0f0;outline-color: #f0f0f0;">
+                <input class="animate" type="radio" name="question" id="q" style="background-color: #66afe9;" />
+                <label class="animate" for="q" style="width: 600px; height: 50px; margin: auto;text-align: center; color: rgb(254, 208, 66); 
+            background-color: rgb(51, 116, 186); position: relative; bottom: 20px; border-radius: 20px;">Frequently Asked Questions</label>
+            </summary>
+            <section class="hiidden" style="background-color: #f0f0f0;  ">
+                <input class="animate" type="radio" name="question" id="q1">
+                <label class="animate" for="q1">Q: How does bidding work?</label>
+                <p class="response animate">
+                    A: Through Denh Tlai, you can enjoy the excitement of bidding in auctions from the comfort of your home. You can place a bid when live bidding take place onec acution kicks off. Once a live auction begins, Denh Tlai bidders gain access to an online bidding
+                    console so that you can follow and participate in the auction in real time. And if you win the bid, you can get your item by visiting Denh Tlai.
+                    <a href="#" style="color: rgb(254, 208, 66);" target="_blank" onclick="window.open('About_us.html#map')">(Location)</a></p>
+
+                <input class="animate" type="radio" name="question" id="q2" />
+                <label class="animate" for="q2">Q: How can I sell items on Denh Tlai?</label>
+                <p class="response animate">
+                    A: In order to be a seller on Denh Tlai, you must bring your items to Denh Tlai office first
+                    <a href="#" style="color: rgb(254, 208, 66);" target="_blank" onclick="window.open('About_us.html#map')">(Location)</a>. And then, your items must be evaluated by Denh Tlai in order to be registered on Denh Tlai website. Once your
+                    items are approved, Denh Tlai will register your items on Its website on your behalf. You can also gain access to an online selling console so that you can check your item's auction information in real time.</p>
+
+                <input class="animate" type="radio" name="question" id="q3" />
+                <label class="animate" for="q3">Q: What are the different ways to shop on Denh Tlai?</label>
+                <p class="response animate">
+                    A: There are a few different ways to shop on Denh Tlai, including bidding in live auctions, as well as buying items at a fixed-price through our 'Buy Now' system. If you wish to purchase something from Denh Tlai, you have the option to bid live in real-time
+                    during the auction. And items listed as 'Buy Now' are available for purchase from sellers at a fixed-price at anytime. You can click 'Buy Now' to check out and buy as you would on any other online marketplace.</p>
+
+                <input class="animate" type="radio" name="question" id="q4" />
+                <label class="animate" for="q4">Q: I won the bid (I have purchased items on "Buy Now"), How can I get take my items?</label>
+                <p class="response animate">
+                    A: Once you won the bid or purchased items on "Buy Now", You must visit Denh Tlai office
+                    <a href="#" style="color: rgb(254, 208, 66);" target="_blank" onclick="window.open('About_us.html#map')">(Location)</a>, And go through an identification process that checking your membership. Once the whole process is completed, You
+                    can take your items from Denh Tlai.
+                </p>
+                <a href="#">
+                    <img src="https://cdn.icon-icons.com/icons2/37/PNG/512/above_theapplication_thearrow_4431.png" style="height: 50px; float: right;">
+                </a>
+            </section>
+        </details>
+
+        <div>
+            <br>
+            <footer class="blog-footer">
+                <br>
+                <p style="text-align: center; color: rgb(153, 153, 153);">&copy; 2019 DENH TLAI. All rights reserved.</p>
+                <!-- <div class="container" style="float: center;width: 70%;">
+                    <p>asd</p>
+                </div> -->
+                <p style="text-align: center;"> <a href="About_us.html" style="text-decoration: none;" target="_blank">About Us</a> | <a href="Q&A_FAQ.html" style="text-decoration: none;" target="_blank">Customer Service</a></p>
+                <a href="https://www.facebook.com/denhtlai/" target="_blank"><img src="img/facebook.png" style="height: 45px"></a>
+                <a href="https://goo.gl/xPWsqt" target="_blank"><img src="http://www.denhtlai.com/images/googlestore-logo.png" style="height: 45px"></a>
+                <a href="https://goo.gl/PJnMHo" target="_blank"><img src="http://www.denhtlai.com/images/appstore-logo.png" style="height: 45px"></a>
+            </footer>
+        </div>
+
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+
+</body>
+
+</html>

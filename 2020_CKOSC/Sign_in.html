@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/sign_in.css">
+    <link href="http://www.denhtlai.com/images/favicon.ico" rel="icon" type="image/ico">
+</head>
+
+<body>
+    <section class="container">
+        <article class="half">
+            <h1>denhtlai</h1>
+            <div class="tabs">
+                <span class="tab signin active"><a href="#signin" id="sign_in">Sign in</a></span>
+                <span class="tab signup"><a href="#signup" id='sign_up'>Sign up</a></span>
+            </div>
+            <div class="content">
+                <div class="signin-cont cont">
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <input type="email" name="email" id="email" class="inpt" required="required" placeholder="Your email">
+                        <label for="email">Your email</label>
+                        <input type="password" name="password" id="password" class="inpt" required="required" placeholder="Your password">
+                        <label for="password">Your password</label>
+                        <input type="checkbox" for="remember" value="remember">Remember Me
+                        <div class="submit-wrap">
+                            <input type="submit" value="Sign in" class="submit" style="position: relative; top: 10px;">
+
+                            <h4 style="text-align: center; position: absolute; top: 175px; margin-left: 25px;">Sign in through SNS Accounts</h4>
+
+                            <a href="https://www.facebook.com/login/" target="_blank" style="width: 30px; height: 30px; margin-bottom: 0px; 
+                                      float: left; margin-left: 15%; margin-top: 0;">
+                                <img src="img/facebook.png" style="width: 30px; height: 30px;" title="Sign in through Facebook Account"></a>
+
+                            <a href="https://accounts.google.com/" target="_blank" style="width: 30px; height: 30px; 
+                                      float: left; margin-left: 20%; margin-top: 0;">
+                                <img src="img/google.png" style="width: 30px; height: 30px;" title="Sign in through Google Account"></a>
+
+                            <a href="https://twitter.com/login" target="_blank" style="width: 30px; height: 30px; float: left; 
+                                      margin-left: 20%; margin-top: 0;">
+                                <img src="img/twitter.png" style="width: 30px; height: 30px;;" title="Sign in through twitter Account"></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-cont cont">
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <input type="email" name="email" id="name" class="inpt" required="required" placeholder="Your name">
+                        <label for="name">Your name</label>
+                        <input type="email" name="email" id="email" class="inpt" required="required" placeholder="Your email">
+                        <label for="email">Your email</label>
+                        <input type="password" name="password" id="password" class="inpt" required="required" placeholder="Your password">
+                        <label for="password">Your password</label>
+                        <div class="submit-wrap">
+                            <input type="submit" value="Sign up" class="submit" style="position: relative; top: 20px;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+        <div class="half bg"></div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('.tabs .tab').click(function() {
+            if ($(this).hasClass('signin')) {
+                $('.tabs .tab').removeClass('active');
+                $(this).addClass('active');
+                $('.cont').hide();
+                $('.signin-cont').show();
+            }
+            if ($(this).hasClass('signup')) {
+                $('.tabs .tab').removeClass('active');
+                $(this).addClass('active');
+                $('.cont').hide();
+                $('.signup-cont').show();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

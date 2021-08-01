@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/sign_up.css">
+    <link href="http://www.denhtlai.com/images/favicon.ico" rel="icon" type="image/ico">
+</head>
+
+<body>
+    <section class="container">
+        <article class="half">
+            <h1>denhtlai</h1>
+            <div class="tabs">
+                <span class="tab signup"><a href="#signup" id='sign_up'>Sign up</a></span>
+            </div>
+            <div class="content">
+                <div>
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <input type="email" name="email" id="name" class="inpt" required="required" placeholder="Your name">
+                        <label for="name">Your name</label>
+                        <input type="email" name="email" id="email" class="inpt" required="required" placeholder="Your email">
+                        <label for="email">Your email</label>
+                        <input type="password" name="password" id="password" class="inpt" required="required" placeholder="Your password">
+                        <label for="password">Your password</label>
+                        <div class="submit-wrap">
+                            <input type="submit" value="Sign up" class="submit" style="position: relative;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+        <div class="half bg"></div>
+    </section>
+    <script type="text/javascript">
+        $('.tabs .tab').click(function() {
+            if ($(this).hasClass('signup')) {
+                $('.tabs .tab').removeClass('active');
+                $(this).addClass('active');
+                $('.cont').hide();
+                $('.signup-cont').show();
+            }
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+
+</html>

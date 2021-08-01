@@ -1,0 +1,10 @@
+.box {
+    border: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.box:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.05, 1.05);
+}
