@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flex아이템 Flex Grow 실습2</title>
+    <style>
+        .container {
+            display: flex;
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        .container>div {
+            margin: 10px;
+        }
+
+        .primary {
+            flex-grow: 2;
+        }
+
+        .secondary {
+            flex-grow: 1;
+        }
+
+        .side {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="primary">
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi voluptatibus fuga dignissimos voluptates
+                aspernatur odio mollitia maiores facere, commodi cupiditate.</p>
+        </div>
+        <div class="secondary">
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim inventore nam aut molestias natus tempora
+                totam perspiciatis saepe iusto amet.</p>
+        </div>
+        <div class="side">
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatibus, saepe modi praesentium
+                assumenda itaque quis odio. Suscipit, ipsa odit.</p>
+        </div>
+    </div>
+</body>
+
+</html>

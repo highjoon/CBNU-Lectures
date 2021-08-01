@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Container: Align-Items, Justify-Items 실습</title>
+    <style>
+        .container {
+            width: 450px;
+            height: 450px;
+            border: 1px solid red;
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(3, 1fr);
+            align-items: start;
+            justify-items: start;
+        }
+
+        div:not(.container) {
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+        <div>Item 9</div>
+    </div>
+</body>
+
+</html>

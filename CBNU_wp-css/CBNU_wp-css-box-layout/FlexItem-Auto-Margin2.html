@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flex아이템 Auto Margin 실습 2</title>
+    <style>
+        .nav,
+        .left,
+        .right {
+            display: flex;
+            height: 80px;
+            align-items: center;
+        }
+
+        .nav {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .left {
+            margin-right: auto;
+        }
+
+        .item {
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <img src="http://placehold.it/200x40">
+        <div class="left">
+            <div class="item">Menu 1</div>
+            <div class="item">Menu 2</div>
+            <div class="item">Menu 3</div>
+        </div>
+        <div class="right">
+            <div class="item">Menu 4</div>
+            <div class="item">Menu 5</div>
+        </div>
+    </div>
+</body>
+
+</html>

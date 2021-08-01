@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flex박스 Direction 실습</title>
+    <style>
+        .flex-box {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 250px;
+            background-color: lightgray;
+        }
+
+        /* row : 가로배치 (기본값)  , column : 세로배치 */
+
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div class="flex-item">Flex Item 1</div>
+        <div class="flex-item">Flex Item 2</div>
+        <div class="flex-item">Flex Item 3</div>
+    </div>
+
+</body>
+
+</html>
