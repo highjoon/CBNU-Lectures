@@ -1,0 +1,273 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css');
+
+/* Layout */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {
+    margin: 0; 
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; 
+    font-size: inherit;
+}
+
+p {
+    text-align: justify center;
+}
+
+.en {
+    font-family: 'Exo 2', sans-serif;}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 14px;
+}
+
+a {
+    color: inherit; 
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+h2 {
+    font-size: 50px;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+address, em, i {
+    font-style: normal;
+}
+
+/* .container */
+
+.container {
+    display: grid;
+    width: 80%;
+    height: auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "main main main";
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    grid-area: header;
+    grid-column: span 3;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+header > a {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+}
+
+header > a > p{
+    display: flex;
+    justify-content: center;
+    margin: 2% auto;
+    font-size: 1.5rem;
+}
+
+/* main */
+
+@media screen and(min-width: 800px) {
+    .profile-wrap {
+        width: 290px;
+        margin-bottom: 0;
+    }
+}
+
+main {
+    display: inline-block;
+    grid-area: main;
+    grid-column: span 3;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'HansCali';
+    justify-content: center;
+}
+
+main .profile {
+    width: 100%;
+    height: 20vh;
+    text-align: left;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid silver;
+    background: #90ee90;
+}
+
+@media screen and(min-width: 800px) {
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* 이메일, 비밀번호 입력 텍스트창 */
+
+input,
+textarea {
+    border-radius: 4px;
+    height: 37px;
+    padding: 10px;
+    border: 1px solid silver;
+}
+
+/* 로그인 이전 초기화면 */
+
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group label {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+}
+.input-group input {
+    width: 75%;
+}
+
+/* 로그인 버튼 및 회원가입 버튼*/
+
+.btn {
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 2%;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background: white;
+    border: 1px solid silver;
+    color: #000;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: top;
+    font-size: 1.5em;
+}
+
+.btn-section {
+    margin: 0 auto;
+    height: auto;
+    text-align: center;
+}
+
+/* 로그인 성공 시 */
+
+.user-name,
+.user-money {
+    font-weight: bold;
+    text-align: center;
+    line-height: 3;
+}
+
+.user-name {
+    font-size: 2em;
+}
+
+.user-money {
+    font-size: 1.2em;
+}
+
+/* 경매 페이지 */
+
+section {
+    width: 60%;
+    margin: 5% auto;
+    border-radius: 4px;
+    text-align: center;
+}
+
+@media screen and(min-width: 800px) {
+    .timeline {
+        width: 500px;
+    }
+}
+
+/* 경매 낙찰 목록 */
+
+#good-list {
+    width: 100%;
+}
+
+#good-list,
+#good-list th,
+#good-list td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 2em;
+}
+#good-list img {
+    max-height: 100px;
+    vertical-align: top;
+}
+
+.auc {
+    text-align: center;
+    height: auto;
+    margin-top: 2%;
+}
+
+/* 실시간 입찰 페이지 */
+
+#good-img {
+    width: 20%;
+    display: block;
+    margin: 3% auto;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+#bid-form {
+    margin-top: 2%;
+}
+
+#sbt-btn {
+    margin-top: 1%;
+}
+
+/* 회원가입 페이지 */
+
+.timeline {
+    margin: 2% auto;
+    width: 50%;
+    text-align: center;
+
+}
+
+#join-form,
+#good-form {
+    padding: 10px;
+    text-align: center;
+}
