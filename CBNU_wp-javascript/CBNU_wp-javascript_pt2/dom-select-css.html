@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 요소 선택 실습</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Container1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p id="item1">Item1</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="container">
+        <h1>Container2</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        console.log(container)
+        const plist = container.querySelectorAll('p');
+        // const plist = document.querySelectorAll('p');
+        console.log(plist);
+    </script>
+</body>
+
+</html>

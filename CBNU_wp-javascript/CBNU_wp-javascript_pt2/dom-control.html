@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 요소 제어 실습</title>
+    <style>
+        .container:nth-child(1) {
+            background-color: yellow;
+        }
+
+        .container:nth-child(2) {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Container1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Previous</p>
+        <p id="item1">Item 1</p>
+        <p>Next</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="container">
+        <h1>Container2</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script>
+        // 새 요소 생성
+        const newElement = document.createElement('h2');
+        // newElement.innerHTML = 'New Element';
+        const textNode = document.createTextNode('new Text Node');
+        newElement.appendChild(textNode);
+
+        // 삽입할 요소 선택
+        const container = document.querySelector('.container');
+        // const secondContainer = document.querySelector('.container')[1];
+        // secondContainer.appendChild(newElement);
+
+        // 앞에 삽입할 요소 선택
+        container.insertBefore(newElement, container.children[1]);
+        // const item = document.querySelector('#item1');
+        // container.insertBefore(newElement, item);
+
+        // const item2 = document.querySelector('.container');
+        // console.log(item2.innerHTML);
+
+        // setTimeout(() => item2.innerHTML = '<h1>Hello</h1>', 2000);
+
+        /*
+        setTimeout(function () {
+            item2.innerHTML = '<h1>Hello</h1>';
+        }, 2000);
+        */
+    </script>
+</body>
+
+</html>

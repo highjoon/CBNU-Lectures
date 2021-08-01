@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 요소 선택 실습</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Container1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Preivous</p>
+        <p id="item1">Item1</p>
+        <p>Next</p>
+        <p>Next of Next</p>
+    </div>
+    <div class="container">
+        <h1>Container2</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+        const element = document.querySelector('#item1');
+        console.log(element);
+        console.log('parent:', element.parentElement);
+        console.log('previous sibling:', element.previousElementSibling);
+        console.log('next sibling:', element.nextElementSibling);
+        const next = element.nextElementSibling;
+        console.log('next of next:', next.nextElementSibling);
+        const parent = element.parentElement;
+        console.log(parent.children);
+    </script>
+</body>
+
+</html>
