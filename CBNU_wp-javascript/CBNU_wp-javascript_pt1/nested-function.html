@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>중첩 함수 실습</title>
+</head>
+
+<body>
+    <script>
+        function pythagoras(width, height) {
+            function square(x) {
+                return x * x;
+            }
+
+            return Math.sqrt(square(width) + square(height));
+        }
+
+        const result = pythagoras(3, 4);
+        document.write(result);
+
+        function square(w, h, hypotenuse) {
+            return w * w + h * h === hypotenuse * hypotenuse;
+        }
+    </script>
+</body>
+
+</html>

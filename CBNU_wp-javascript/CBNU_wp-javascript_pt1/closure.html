@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>클로저 함수 실습</title>
+</head>
+
+<body>
+    <script>
+        function sayHi(name) {
+            function hi() {
+                return `Hi~ ${name}`;
+            }
+
+            return hi;
+        }
+
+        const hiHong = sayHi('길동');
+        const hiLim = sayHi('꺽정');
+
+        document.write(hiHong());       // "Hi~ 길동" 이 리턴되어 출력
+        document.write(hiLim());        // "Hi~ 꺽정" 이 리턴되어 출력
+    </script>
+</body>
+
+</html>
