@@ -1,0 +1,348 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@font-face {
+    font-family: 'HansCali';
+    src: url(../fonts/HanS_Calli.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'SeoulHan';
+    src: url(../fonts/seoulhangang.ttf) format('truetype');
+}
+
+.container {
+    display: grid;
+    width: 80%;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 50px;
+    column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header ." 
+    "main main main" 
+    "section section aside" 
+    "sidebar content content" 
+    "content2 content2 content3"
+    "footer footer footer";
+    margin: 0 auto;
+}
+
+header {
+    grid-area: header;
+    grid-column: span 3;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+#logo {
+    width: 50%;
+    height: 50px;
+    padding: 0;
+}
+
+#menu {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: 'SeoulHan';
+}
+
+#menu:visited {
+    text-decoration: none;
+}
+
+#menu:hover {
+    text-decoration: none;
+}
+
+#menu:focus {
+    text-decoration: none;
+}
+
+header>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    grid-area: main;
+    grid-column: span 3;
+    height: 500px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 2s;
+    font-family: 'HansCali';
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: block;
+}
+
+span {
+    transform: skew(-10deg);
+    display: block;
+    float: left;
+}
+
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 47px;
+    letter-spacing: 2px;
+    height: 70%;
+    animation: banner-content 2s infinite alternate;
+}
+
+.title {
+    transform: translateX(-50%) rotate(-10deg);
+    float: left;
+    top: 25%;
+    left: 30%;
+    position: relative;
+    font-size: 45px;
+}
+
+.title2 {
+    transform: translateX(-50%) rotate(-10deg);
+    float: left;
+    top: 40%;
+    left: -5%;
+    position: relative;
+    font-size: 40px;
+}
+
+@keyframes banner-content {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+#items {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'SeoulHan';
+    padding: 0 0;
+}
+
+#items:visited {
+    text-decoration: none;
+}
+
+#items:hover {
+    text-decoration: none;
+}
+
+#items:focus {
+    text-decoration: none;
+}
+
+section {
+    grid-area: section;
+    padding-right: 20px;
+}
+
+section>a {
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 300px;
+    margin-right: 60px;
+    transition-duration: 1s;
+}
+
+section>a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+section>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+section>a:hover>.bar {
+    width: 90%;
+    height: 90%;
+}
+
+.bar>p {
+    margin: 5%;
+    color: black;
+}
+
+section>p {
+    font-size: 30px;
+}
+
+aside {
+    grid-area: aside;
+    justify-self: center;
+    width: 100%;
+    padding-right: 20px;
+    transition-duration: 1s;
+}
+
+aside>a {
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 300px;
+    margin-right: 60px;
+    transition-duration: 1s;
+    background-size: cover;
+}
+
+aside>a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+aside>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+aside>a:hover>.bar {
+    width: 90%;
+    height: 90%;
+}
+
+aside > p {
+    width: 100%;
+    font-size: 30px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.sidebar > a {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-right: 60px;
+    transition-duration: 1s;
+    background-size: cover;
+}
+
+.sidebar > a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.sidebar>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.sidebar>a:hover>.bar {
+    width: 90%;
+    height: 90%;
+}
+
+.content {
+    grid-area: content;
+    justify-self: flex-start;
+    padding-left: 60px;
+}
+
+.content>p {
+    font-size: 30px;
+}
+
+.content2 {
+    grid-area: content2;
+    padding-right: 60px;
+    grid-column: span 2;
+    justify-self: flex-end;
+}
+
+.content2>h2 {
+    margin: 0;
+}
+
+.content2>p {
+    width: 100%;
+    font-size: 30px;
+}
+
+.content3>a {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 300px;
+    margin-right: 60px;
+    transition-duration: 1s;
+    background-size: cover;
+}
+
+.content3>a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.content3>a>.bar {
+    width: 0;
+    height: 0;
+    background:linear-gradient(#cb60b3 0%, #db36a4 100%);
+    margin: 5% 5%;
+    transition-duration: 1s;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.content3>a:hover>.bar {
+    width: 90%;
+    height: 90%;
+}
+
+p {
+    text-align: justify center;
+}
+
+section, aside, .content, .content2 {
+    font-family: 'Nanum Brush Script', serif; line-height: 1.5; color: #888;
+}
+
+h2 {
+    font-size: 50px;
+    color: black;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+footer p {
+    font-style: italic;
+    font-size: 20px;
+    height: 10%;
+}

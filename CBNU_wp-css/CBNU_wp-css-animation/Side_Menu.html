@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Side Menu 구현 실습</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <button id="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <h5>My Home Page</h5>
+    </header>
+
+    <nav id="side-menu" class="hidden">
+        <ul>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>My Home Page</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt obcaecati magni id dolor in veniam facere
+            voluptatum rerum maiores distinctio, ab consectetur nesciunt vero libero sequi laborum ex repellendus minima
+            omnis est iure, perferendis officia, maxime quam! Voluptates laborum ipsa beatae velit modi facilis nihil
+            omnis sapiente reiciendis, optio numquam assumenda officiis possimus. Architecto vel debitis deserunt nemo!
+            Temporibus nemo eveniet repudiandae deserunt, ab dolorem praesentium saepe vel ipsa quia aliquid laudantium
+            laboriosam obcaecati sapiente rerum possimus a dicta! Voluptas in deleniti officiis hic vero, odit
+            accusantium dolorem impedit eos praesentium, laboriosam cumque voluptatibus consequatur quaerat tempora
+            placeat molestiae alias nulla eaque amet eligendi iure. Dolores mollitia esse necessitatibus consectetur
+            praesentium veritatis amet maiores accusamus, quae explicabo adipisci libero minus quod, veniam nihil
+            placeat deleniti inventore ratione quis est maxime quisquam. Fuga laborum maxime, obcaecati quis
+            consectetur, doloremque ea quasi sunt, expedita voluptates eum mollitia. Error ea totam excepturi repellat
+            nemo modi fuga amet cum facilis adipisci, cupiditate sit corporis quis vel quas eum ab officiis. Nemo
+            dolorum, cum sunt quidem eum facere eos aut qui at enim ipsa illum temporibus explicabo ad est sit corrupti
+            iste quod consequatur. Nam minima saepe nisi numquam nobis molestiae dolores, aspernatur reiciendis rerum
+            corrupti ratione nostrum quas itaque aut harum at non tempora excepturi doloremque. Nostrum veritatis quasi
+            ad, error corrupti a facilis dolores? Deleniti odit maxime ratione tempore autem aperiam nulla, assumenda
+            dolorem ut vitae dignissimos quidem non numquam aliquid excepturi neque in provident sequi nesciunt cumque!
+            Qui sit corporis sapiente unde perspiciatis. Deleniti saepe rerum eius illo officia, recusandae quidem
+            repellendus porro nobis deserunt repudiandae ullam exercitationem temporibus aperiam excepturi, asperiores
+            delectus. Consequuntur maxime vero inventore, quo eum ab reprehenderit recusandae laudantium maiores
+            necessitatibus autem atque error voluptas nemo repudiandae tempora! Minima placeat est impedit accusantium
+            dolorum optio quae in laborum.</p>
+    </main>
+
+    <script>
+        // javascript 코드(다음 주 강의부터 다루게 됨)
+        let hidden = true;
+        const menuButton = document.getElementById('menu-button');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuButton.addEventListener('click', () => {
+            if (hidden) {
+                sideMenu.classList.remove('hidden');
+                hidden = false;
+            } else {
+                sideMenu.classList.add('hidden');
+                hidden = false;
+            }
+        });
+    </script>
+</body>
+
+</html>
