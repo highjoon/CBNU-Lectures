@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Basic</title>
+ <script>
+  window.onload = function() {
+   var output= '';
+   for(var i=0; i<256; i++)
+     output += '<div></div>';
+   document.body.innerHTML = output;
+   var ds = document.querySelectorAll('div');
+   for (var i=0; i<ds.length; i++) {
+     var d = ds[i];
+     d.style.height = '2px';
+     d.style.background='rgb('+i+','+i+','+i+')';
+   }
+  }
+ </script>
+</head>
+<body> </body>
+</html>

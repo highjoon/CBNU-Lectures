@@ -1,0 +1,548 @@
+# 이 viminfo 파일은 빔이 만든 것입니다 Vim 7.4.
+# 조심만 한다면 고칠 수도 있습니다!
+
+# 이 파일이 저장되었을 때의 'encoding'의 값
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~H
+# 명령 줄 히스토리 (새것부터 오래된 것 순):
+:wq
+:q
+:!q
+
+# 찾을 문자열 히스토리 (새것부터 오래된 것 순):
+
+# 표현 히스토리 (새것부터 오래된 것 순):
+
+# 입력 줄 히스토리 (새것부터 오래된 것 순):
+
+# 입력 줄 히스토리 (새것부터 오래된 것 순):
+
+# 레지스터:
+"1	LINE	0
+	                                                        // ch를 1바이트씩 읽어서 모니터에 출력하라는 뜻이다.
+	                                                        //                                                         // 성공시 쓰여진 바이트 수를 반환하고 쓰여진 것이 없으면 0을 반환한다.
+	                                                        //                                                                                                                 // 에러일 경우 -1을 반환한다.
+	                                                        //
+	                                                        //                                                                                                                         close(fd);
+	                                                        //         
+"2	LINE	0
+	#include <stdio.h>
+	#include <limits.h>
+	
+	#define V 5
+	 
+	 
+	int minDistance(int dist[V], bool sptSet[V])
+	{
+	    int min = INT_MAX, min_index;
+	    int v;
+	    for (v = 0; v < V; v++)
+	    {
+	        if (!sptSet[v] && min > dist[v])
+	        {
+	            min_index = v;
+	            min = dist[v];
+	        }
+	    }
+	 
+	    return min_index;
+	}
+	
+	void printSolution(int dist[], int n) {
+	    int i;
+	    printf("Vertex   Distance from Source\n");
+	    for (i = 0; i < V; i++)
+	        printf("%d \t\t %d\n", i, dist[i]);
+	}
+	 
+	void dijkstra(int graph[V][V], int src) {
+	    int dist[V];
+	    bool sptSet[V];
+	    int i, v;
+	    int count;
+	 
+	    for (i = 0; i<V; i++)
+	        dist[i] = INT_MAX, sptSet[i] = false;
+	
+	    dist[src] = 0;
+	
+	    for (count = 0; count < V - 1; count++) {
+	        int u = minDistance(dist, sptSet);
+	        for (v = 0; v < V; v++) {
+	            if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX && dist[v] > dist[u] + graph[u][v]) {
+	                dist[v] = dist[u] + graph[u][v];
+	            }
+	        }
+	        sptSet[u] = true;
+	        printSolution(dist, V);
+	    }
+"3	LINE	0
+		for(k=1;i<size;k++){
+			key=arr[k];
+			i=k-1;
+			while(i>=0&&arr[i]>key){
+				arr[i+1]=arr[i];
+				i--;
+			}
+		}
+		arr[i+1]=key;
+	}
+	
+"4	LINE	0
+		k=size-1;flag=true;
+		while(k>0&&flag){
+			flag=false;
+			for(i=0;i<k;i++)
+				if(arr[i]>arr[i+1]){swap(arr[i],arr[i+1]);flag=true;}
+			k--;
+		}
+"5	LINE	0
+		for(i=0;i<size-1;i++){
+			min=i;
+			for(j=i+1;j<size;j++)if(arr[j
+"6	LINE	0
+	for(i=0;i<size-1;i++){
+		min=i;
+		for(j=i+1;j<size;j++)if(arr[j]<arr[min])min=j;
+		if(i!=min)swap(arr[i],arr[min]);
+	}
+"7	LINE	0
+	This is a test file made by "cat" command.
+"8	LINE	0
+	My name is Yoon Sang Joon.
+"u	CHAR	0
+	itzzzz�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb�kb}�kI�kI�kD�kd�kd�kd�kr�kl�kb
+""-	CHAR	0
+	i
+
+# 파일 마크:
+'0  1  0  ~/wc2.c
+'1  17  0  ~/midexam/fibo.c
+'2  1  244  ~/midexam/fibo.c
+'3  1  241  ~/midexam/fibo.c
+'4  1  262  ~/midexam/fibo.c
+'5  1  1  ~/midexam/fibo.c
+'6  14  5  ~/midexam/maxmin.c
+'7  1  0  ~/midexam/maxmin
+'8  16  11  ~/midexam/maxmin.c
+'9  24  80  ~/midexam/maxmin.c
+
+# 점프목록 (새것이 먼저):
+-'  1  0  ~/wc2.c
+-'  17  0  ~/midexam/fibo.c
+-'  1  244  ~/midexam/fibo.c
+-'  14  5  ~/midexam/maxmin.c
+-'  16  9  ~/midexam/maxmin.c
+-'  1  0  ~/midexam/maxmin
+-'  24  4  ~/midexam/maxmin.c
+-'  1  0  ~/midexam/maxmin.c
+-'  12  15  ~/week06/chdir.c
+-'  1  0  ~/week06/chdir.c
+-'  1  1  ~/week06/cp2.c
+-'  24  0  ~/week06/cp2.c
+-'  57  1  ~/week06/cat2.c
+-'  1  0  ~/week06/cat2.c
+-'  89  0  ~/week06/cat2.c
+-'  116  0  ~/week06/cat2.c
+-'  138  1  ~/week06/cat2.c
+-'  141  66  ~/week06/cat2.c
+-'  1  0  ~/week05/practice05.c
+-'  74  0  ~/week05/practice05.c
+-'  146  0  ~/week05/practice05.c
+-'  84  0  ~/week05/practice04.c
+-'  1  1  ~/week05/practice04.c
+-'  81  0  ~/week05/practice03.c
+-'  79  0  ~/week05/practice03.c
+-'  1  0  ~/week05/practice03.c
+-'  7  0  ~/week05/practice02.c
+-'  39  0  ~/week05/practice02.c
+-'  1  446  ~/week05/practice02.c
+-'  46  0  ~/week05/practice01.c
+-'  1  0  ~/week05/practice01.c
+-'  41  0  ~/week05/practice01.c
+-'  18  0  ~/week04/practice03.c
+-'  19  0  ~/week04/practice03.c
+-'  12  0  ~/week04/practice02.c
+-'  1  0  ~/week04/practice02.c
+-'  18  0  ~/week04/test.c
+-'  17  0  ~/week04/test.c
+-'  1  0  ~/week04/test.c
+-'  23  0  ~/week04/practice01.c
+-'  24  85  ~/week04/practice01.c
+-'  1  0  ~/week04/practice03.c
+-'  12  0  ~/week04/practice02
+-'  1  0  ~/week04/practice01.c
+-'  14  0  ~/week04/practice03
+-'  1  0  ~/week04/practice03
+-'  1  0  ~/week04/practice02
+-'  10  0  ~/week04/practice01
+-'  9  1  ~/week04/practice01
+-'  1  0  ~/week04/practice01
+-'  1  0  ~/practice01
+-'  1  0  ~/helloWorld.c
+-'  1  0  ~/sumN2N.c
+-'  11  0  ~/sumM2N.c
+-'  9  41  ~/sumM2N.c
+-'  1  0  ~/sumM2N.c
+-'  2  25  ~/helloWorld.c
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  11  0  ~/sumM2N.c
+-'  9  41  ~/sumM2N.c
+-'  1  0  ~/sumM2N.c
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/sumN2N.c
+-'  11  0  ~/sumM2N.c
+-'  9  41  ~/sumM2N.c
+-'  1  0  ~/sumM2N.c
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  11  0  ~/sumM2N.c
+-'  9  41  ~/sumM2N.c
+-'  1  0  ~/sumM2N.c
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/helloWorld.c
+-'  1  0  ~/sumN2N.c
+-'  11  0  ~/sumM2N.c
+-'  9  41  ~/sumM2N.c
+-'  1  0  ~/sumM2N.c
+-'  2  25  ~/helloWorld.c
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  1  0  ~/testfile
+-'  11  0  ~/sumM2N.c
+-'  9  41  ~/sumM2N.c
+-'  1  0  ~/sumM2N.c
+-'  1  0  ~/testfile
+-'  21  0  ~/midexam/fibo.c
+
+# 파일내의 마크 히스토리 (새것부터 오래된 순):
+
+> ~/wc2.c
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	537
+	+	1	0
+
+> ~/midexam/fibo.c
+	"	17	0
+	^	17	0
+	.	16	1
+	+	1	270
+	+	1	1
+	+	1	241
+	+	1	0
+	+	1	244
+	+	16	1
+
+> ~/midexam/maxmin.c
+	"	14	5
+	^	16	12
+	.	13	6
+	+	26	0
+	+	3	0
+	+	24	80
+	+	16	11
+	+	14	7
+	+	13	6
+
+> ~/midexam/maxmin
+	"	1	0
+
+> ~/week06/chdir.c
+	"	12	15
+	^	12	16
+	.	8	10
+	+	16	1
+	+	1	1
+	+	8	10
+
+> ~/week06/cp2.c
+	"	1	1
+	^	1	2
+	.	1	1
+	+	24	0
+	+	1	1
+
+> ~/week06/cat2.c
+	"	57	1
+	^	57	2
+	.	57	0
+	+	141	196
+	+	141	0
+	+	136	0
+	+	140	0
+	+	139	0
+	+	116	1
+	+	1	0
+	+	116	1
+	+	116	1
+	+	95	0
+	+	96	0
+	+	97	0
+	+	98	1
+	+	99	0
+	+	100	1
+	+	101	1
+	+	102	1
+	+	104	0
+	+	102	2
+	+	104	0
+	+	106	0
+	+	107	1
+	+	108	1
+	+	109	2
+	+	111	0
+	+	113	0
+	+	114	0
+	+	115	0
+	+	116	0
+	+	117	0
+	+	1	16
+	+	89	0
+	+	1	17
+	+	57	0
+
+> ~/week05/practice05.c
+	"	1	0
+	^	74	1
+	.	74	0
+	+	146	0
+	+	1	16
+	+	1	0
+	+	1	18
+	+	74	0
+
+> ~/week05/practice04.c
+	"	84	0
+	^	1	2
+	.	1	1
+	+	84	0
+	+	1	1
+
+> ~/week05/practice03.c
+	"	81	0
+	^	81	0
+	.	1	1
+	+	80	1
+	+	1	1
+
+> ~/week05/practice02.c
+	"	7	0
+	^	7	0
+	.	6	7
+	+	1	533
+	+	1	19
+	+	2	0
+	+	4	0
+	+	6	27
+	+	9	17
+	+	10	20
+	+	11	29
+	+	12	33
+	+	13	26
+	+	14	2
+	+	13	3
+	+	14	30
+	+	15	24
+	+	16	5
+	+	17	17
+	+	18	4
+	+	19	3
+	+	21	0
+	+	24	14
+	+	25	45
+	+	26	18
+	+	28	1
+	+	23	6
+	+	29	22
+	+	30	21
+	+	31	18
+	+	32	17
+	+	33	3
+	+	34	27
+	+	35	26
+	+	36	3
+	+	37	11
+	+	38	1
+	+	6	5
+	+	34	5
+	+	6	1
+	+	8	0
+	+	6	7
+
+> ~/week05/practice01.c
+	"	46	0
+	^	46	0
+	.	41	5
+	+	1	15
+	+	1	337
+	+	1	813
+	+	1	130
+	+	1	17
+	+	3	47
+	+	4	0
+	+	5	47
+	+	5	47
+	+	47	0
+	+	5	49
+	+	6	18
+	+	7	10
+	+	8	3
+	+	9	20
+	+	10	19
+	+	11	13
+	+	12	11
+	+	14	15
+	+	15	44
+	+	16	8
+	+	17	4
+	+	18	46
+	+	19	8
+	+	20	4
+	+	21	12
+	+	22	19
+	+	23	26
+	+	24	23
+	+	25	3
+	+	26	7
+	+	27	2
+	+	26	6
+	+	28	22
+	+	29	19
+	+	30	4
+	+	31	2
+	+	33	33
+	+	34	31
+	+	36	0
+	+	39	24
+	+	41	26
+	+	42	26
+	+	43	3
+	+	44	11
+	+	45	1
+	+	1	0
+	+	38	6
+	+	41	5
+
+> ~/week04/practice03.c
+	"	18	0
+	^	18	0
+	.	17	1
+	+	3	11
+	+	19	0
+	+	16	0
+	+	15	2
+	+	16	2
+	+	17	1
+
+> ~/week04/practice02.c
+	"	12	0
+	^	12	0
+	.	11	1
+	+	10	0
+	+	9	29
+	+	11	0
+	+	10	0
+	+	11	1
+
+> ~/week04/test.c
+	"	18	0
+	^	18	0
+	.	18	0
+	+	19	0
+	+	6	15
+	+	16	1
+	+	2	0
+	+	3	12
+	+	17	0
+	+	16	0
+	+	15	1
+	+	14	1
+	+	12	2
+	+	11	2
+	+	10	1
+	+	9	1
+	+	8	0
+	+	7	0
+	+	6	1
+	+	5	0
+	+	18	0
+
+> ~/week04/practice01.c
+	"	23	0
+	^	23	0
+	.	22	1
+	+	1	27
+	+	24	0
+	+	1	30
+	+	24	0
+	+	1	18
+	+	17	0
+	+	5	20
+	+	15	24
+	+	16	13
+	+	17	2
+	+	22	1
+
+> ~/week04/practice02
+	"	12	0
+	^	12	0
+	.	3	11
+	+	3	15
+	+	4	20
+	+	8	23
+	+	8	23
+	+	9	5
+	+	10	0
+	+	11	1
+	+	3	11
+
+> ~/week04/practice03
+	"	14	0
+	^	14	0
+	.	13	1
+	+	1	17
+	+	3	15
+	+	4	21
+	+	4	21
+	+	5	13
+	+	10	2
+	+	11	2
+	+	12	13
+	+	13	1
+
+> ~/week04/practice01
+	"	10	0
+	^	10	0
+	.	9	1
+	+	9	2
+	+	9	1
+	+	3	16
+	+	9	1
+	+	4	0
+	+	5	1
+	+	6	1
+	+	7	1
+	+	8	0
+	+	11	0
+	+	4	0
+	+	9	1
+
+> ~/practice01
+	"	1	0

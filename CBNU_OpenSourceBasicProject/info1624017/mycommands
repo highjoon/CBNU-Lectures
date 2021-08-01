@@ -1,0 +1,542 @@
+    1  passwd
+    2  exit
+    3  passwd
+    4  pwd
+    5  passwd
+    6  #pwunconv
+    7  passwd
+    8  /etc
+    9  /bin
+   10  ls
+   11  /etc/passwd
+   12  /home/info1
+   13  ls
+   14  ls -l
+   15  ls -la
+   16  cd /
+   17  cd
+   18  ls
+   19  cd home
+   20  ls
+   21  pwd
+   22  ls -i
+   23  ls -l
+   24  ls -d
+   25  cat helloWorld.c
+   26  ls
+   27  cat helloWorld.c
+   28  cat > testfile
+   29  chmod absolute-mode file
+   30  vi testfile
+   31  cat helloWorld.c
+   32  cat > helloWorld.c
+   33  cc helloWorld.c
+   34  a.out
+   35  vi helloWorld.c
+   36  cat helloWorld.c
+   37  cc helloWorld.c
+   38  a.out
+   39  ./a.out
+   40  exit
+   41  passwd
+   42  ls -l
+   43  cd test
+   44  ls -l
+   45  vim
+   46  cd -
+   47  cd test
+   48  cd -
+   49  cd test1
+   50  ls
+   51  ls -l
+   52  cd
+   53  rm -ri test1
+   54  cd test2
+   55  ls
+   56  cd
+   57  mv test2 test
+   58  ls
+   59  mkdir week04
+   60  touch practice01
+   61  vim practice01
+   62  ls
+   63  mv practice01 week04
+   64  cd week04
+   65  ls
+   66  vim practice01
+   67  touch practice02
+   68  vim practice02
+   69  touch practice03
+   70  vim practice03
+   71  cc practice01
+   72  mv practice01 practice01.c
+   73  cc practice01.c
+   74  ls
+   75  cat practice01.c
+   76  vim practice01.c
+   77  cc practice01.c
+   78  ls
+   79  gcc practice01.c
+   80  ls -l
+   81  vim practice02
+   82  cat practice01.c
+   83  cat practice02
+   84  mv practice02 practice02.c
+   85  gcc practice02.c
+   86  mv practice03 practice03.c
+   87  ls -l
+   88  vim practice03.c
+   89  c d-
+   90  cd -
+   91  ls
+   92  cat sortData
+   93  cp sortData week04
+   94  cd week04
+   95  cc -o sortData practice01.c
+   96  ls
+   97  ./practice01.c
+   98  ./sortData
+   99  cat sortData
+  100  clear
+  101  ./sortData < practice01.c
+  102  ./sortData < practice01.c > result
+  103  cc practice01.c
+  104  vim practice01.c
+  105  cc practice01.c
+  106  ls
+  107  cat result
+  108  rm result
+  109  rm sortData
+  110  ls -l
+  111  cat practice01.c
+  112  gcc practice01.c -o a
+  113  ls
+  114  cat practice01.c
+  115  gcc practice01.c -std=c99 a
+  116  gcc -std=c99 practice01.
+  117  ls
+  118  touch test.c
+  119  vim test.c
+  120  gcc practice01.c
+  121  gcc test.c
+  122  ls
+  123  vim test.c
+  124  gcc test.c
+  125  ls
+  126  ./a.out
+  127  ls
+  128  cat test.c
+  129  a.out
+  130  ./a.out
+  131  gcc test.c -o result
+  132  ./result
+  133  ls
+  134  rm a.out
+  135  ls
+  136  rm practice01.c
+  137  mv test.c practice01.c
+  138  rm result
+  139  gcc practice01.c -o practice01
+  140  ls
+  141  vim practice02.c
+  142  gcc practice02.c -o practice02
+  143  ./practice02
+  144  ls
+  145  vim practice03.c
+  146  gcc practice03.c
+  147  ./practice03
+  148  rm a.out
+  149  gcc practice03.c -o practice03
+  150  ./practice03
+  151  ls
+  152  c
+  153  cd
+  154  ls
+  155  mkdir week03
+  156  cp test week03
+  157  cd -r test week03
+  158  cp -r test week03
+  159  cd week03
+  160  ls
+  161  cd test
+  162  ls
+  163  mv helloWorld.c large memo memo2 sumM2N.c test.c testfile week03
+  164  mv helloWorld.c large memo memo2 sumM2N.c test.c testfile ~
+  165  ./
+  166  cd week03
+  167  cd ../week03
+  168  cd ./week03
+  169  cd
+  170  cd week03
+  171  ls
+  172  cd
+  173  ls
+  174  mv helloWorld.c memo result sortsumM2N.c test.c memo2 large week03
+  175  mv helloWorld.c memo result sumM2N.c test.c memo2 large week03
+  176  ls
+  177  cd week03
+  178  ls
+  179  rm -r test
+  180  ls
+  181  cat sumM2N.c
+  182  gcc sumM2N.c
+  183  ls
+  184  rm a.out
+  185  gcc sumM2N.c -o sumM2N
+  186  cat test.c
+  187  gcc test.c -o test
+  188  ./test
+  189  ./sumM2N
+  190  ls
+  191  clear
+  192  cd
+  193  ls
+  194  rm sum2
+  195  mkdir week02
+  196  mv sum2.c week02
+  197  mv testfile week02
+  198  cat selSort.c
+  199  mv serSort.c week03
+  200  mv selSort.c week03
+  201  cat data
+  202  mv data week03
+  203  ls
+  204  mv sortData week03
+  205  cd week03
+  206  ls
+  207  mv helloWorld ../week02
+  208  mv helloWorld.c ../week02
+  209  ls
+  210  cd
+  211  clear
+  212  ls
+  213  cd test
+  214  ls
+  215  cd
+  216  rm -r test
+  217  rm -r backup
+  218  ls
+  219  clear
+  220  ls
+  221  mkdir week05
+  222  cd week05
+  223  vim practice01.c
+  224  gcc practice01.c -o practice01
+  225  cat practice01.c
+  226  vim practice01.c
+  227  gcc practice01.c -o practice01
+  228  gcc practice01.c -o -std=c99  practice01
+  229  vim practice01.c
+  230  gcc practice01.c -o practice01
+  231  ./practice01
+  232  clear
+  233  vim practice02.c
+  234  gcc practice02.c -o practice02
+  235  vim practice02.c
+  236  gcc practice02.c -o practice02
+  237  vim practice02.c
+  238  gcc practice02.c -o practice02
+  239  ./practice02
+  240  clear
+  241  #include <stdio.h>
+  242  #include <stdlib.h>
+  243  #include <string.h>
+  244  #define MAX_SIZE_STACK 100
+  245   
+  246  typedef struct {
+  247      int stack[MAX_SIZE_STACK];
+  248      int top;
+  249  }StackType;
+  250   
+  251  void init(StackType *s)
+  252  {     s->top = -1; }
+  253   
+  254  int is_empty(StackType *s){
+  255      return s->top == -1;
+  256  }
+  257   
+  258  int is_full(StackType *s){
+  259      return s->top == MAX_SIZE_STACK - 1;
+  260  } 
+  261   
+  262  void push(StackType *s, int item){
+  263      if(is_full(s))
+  264          exit(1);
+  265      s->stack[++(s->top)] = item;
+  266  }
+  267   
+  268  int pop(StackType *s){
+  269      if(is_empty(s))
+  270          exit(1);
+  271      return s->stack[(s->top)--];
+  272  } 
+  273   
+  274  int calc(char *exp)
+  275  {     int op1, op2, value, i;     int len = (int)strlen(exp);
+  276      char ch;
+  277      StackType s;
+  278      
+  279      init(&s);
+  280      
+  281      for(i=0; i<len; i++)
+  282      {         ch = exp[i];                  if(ch!='*' && ch!='+' && ch!='/' && ch!='-');         {             value = ch - '0';             push(&s, value);
+  283              continue;
+  284          }
+  285          
+  286          op2 = pop(&s);
+  287          op1 = pop(&s);
+  288          
+  289          switch(ch){
+  290              case '*': value = op1*op2; break;
+  291              case '+': value = op1+op2; break;
+  292              case '/': value = op1/op2; break;
+  293              case '-': value = op1-op2; break;
+  294              default : exit(1); break;
+  295          }
+  296          
+  297          push(&s, value);
+  298      }
+  299      
+  300      return pop(&s);
+  301  }
+  302   
+  303  int main(void)
+  304  {     int result;     char *postfix = "82/3-32*+";     result = calc(postfix);
+  305      printf("후위 표기식 %s의 계산 결과 : %d\n", postfix, result);
+  306      return 0;
+  307  }
+  308  clear
+  309  ls
+  310  cat top
+  311  rm top
+  312  touch practice03.c
+  313  vim practice03.c
+  314  gcc practice03.c -o practice03
+  315  ./practice03
+  316  ls
+  317  vim practice04.c
+  318  gcc practice04.c -o practice04
+  319  ./practice04
+  320  vim practice05.c
+  321  gcc practice05.c -p practice05
+  322  gcc practice05.c -o practice05
+  323  ./practice05
+  324  cat practice05
+  325  cat practice05.c
+  326  ls
+  327  rm practice05 practice05.c
+  328  ls
+  329  vim practice05.c
+  330  gcc practice05.c -o practice05
+  331  rm practice05
+  332  ls
+  333  vim practice05.c
+  334  gcc practice05.c -o practice05
+  335  ls
+  336  cd
+  337  ls
+  338  quit
+  339  q
+  340  exit
+  341  l
+  342  li
+  343  -li
+  344  ㅣㄴ
+  345  ls
+  346  mkdir week06
+  347  ls
+  348  cd week06
+  349  vim cat2.c
+  350  ls
+  351  cat2.c
+  352  cat2 -n file
+  353  rm cat2.c
+  354  vi cat2.c
+  355  cat2 f1
+  356  gcc cat2.c -o cat2
+  357  clear
+  358  gcc -o cat2 cat2.c
+  359  ls
+  360  gcc cat2.c -o cat2
+  361  cat2.c
+  362  cat cat2.c
+  363  vim cat2.c
+  364  gcc cat2.c -o cat2
+  365  cat2 f1
+  366  ls
+  367  cat2 -n file
+  368  /.cat2 test
+  369  ./cat2 >> test
+  370  ls
+  371  cat test
+  372  rm test
+  373  cat >> test
+  374  ./cat2 test
+  375  cat2 >> test1
+  376  cat2 -n file
+  377  rm cat2.c
+  378  rm cat2
+  379  vi cat2.c
+  380  ./cat2 cat2.c
+  381  cat2 > test
+  382  ls
+  383  rm test
+  384  rm test1
+  385  clear
+  386  ls
+  387  gcc -o cat2 cat2.c
+  388  ./cat2 cat2.c
+  389  cat2 -n file
+  390  cat2 > test
+  391  ./cat2 > test
+  392  rm test
+  393  cat f1
+  394  cat > f1
+  395  cat > f2
+  396  clear
+  397  cat2 f1
+  398  cat2 > f1
+  399  ./cat2 > f1
+  400  cat f1
+  401  cat f2
+  402  ls
+  403  cat2 > test
+  404  rm cat2
+  405  rm cat2.c
+  406  vim cat2.c
+  407  ls
+  408  rm f1
+  409  clear
+  410  gcc -o cat2 cat2.c
+  411  cat2 f1
+  412  ./cat2 f1
+  413  ./cat2 f2
+  414  vim cp2.c
+  415  gcc cp2 -o cp2.c
+  416  ls
+  417  gcc cp2.c -o cp2
+  418  cat cp2.c
+  419  vim cp2.c
+  420  clear
+  421  gcc cp2.c -o cp2
+  422  cp2 f1 f2
+  423  ./cp2 f1 f2
+  424  ls
+  425  cat f1
+  426  cat f2
+  427  vim chdir.c
+  428  ./cat2 f1
+  429  ./cat2 f2
+  430  ./cat2 > f1
+  431  ./cat2 > f2
+  432  ./cat2 f1
+  433  ./cat2 f2
+  434  ./cat2 -n f2
+  435  ./cp2 f1 f2
+  436  cat f2
+  437  mkdir cpdir
+  438  ./cp2 f1 f2 cpdir
+  439  ls
+  440  gcc chdir -o chdir.c
+  441  gcc chdir.c -o chdir
+  442  cat chdir.c
+  443  vim chdir.c
+  444  gcc chdir.c -o chdir
+  445  clear
+  446  ls
+  447  ./cp2 f1 cpdir
+  448  cd cpdir
+  449  ls
+  450  cat cpdir
+  451  cd ./
+  452  cd /
+  453  cd
+  454  ls
+  455  cd week06
+  456  ls
+  457  ./cp2 f2 cpdir
+  458  cd cpdir
+  459  ls
+  460  ./
+  461  /
+  462  /.
+  463  //
+  464  cd week06
+  465  cd ./week06
+  466  cd /week06
+  467  cd
+  468  cd week06
+  469  exit
+  470  ls
+  471  mkdir -m 750------ protection
+  472  mkdir midexam
+  473  mkdir protection
+  474  chmod 700------ protection
+  475  chmod rwx------protection
+  476  chmod rwx------ protection
+  477  cd midexam
+  478  vi maxmin.c
+  479  gcc maxmin.c -o maxmin
+  480  gcc maxmin -o maxmin.c
+  481  gcc maxmin.c -o maxmin
+  482  vim maxmin.c
+  483  gcc maxmin.c -o maxmin
+  484  vim maxmin.c
+  485  gcc maxmin.c -o maxmin
+  486  cat indata
+  487  cat > indata
+  488  ls
+  489  ./maxmin < indata
+  490  vim maxmin
+  491  vi maxmin.c
+  492  rm maxmin
+  493  gcc maxmin.c -o maxmin
+  494  ./maxmin < indata
+  495  vim fibo.c
+  496  ls
+  497  gcc fibo.c -o fibo
+  498  cat > result2
+  499  ./maxmin < result2 > result2
+  500  ./fibo < result2 > result2
+  501  cat result2
+  502  ./fibo < 2
+  503  ./fibo < result2
+  504  vim fibo.c
+  505  fibo
+  506  cat fibo
+  507  clear
+  508  rm fibo
+  509  vim fibo.c
+  510  gcc fibo.c -o fibo
+  511  ./fibo < result2 > result2
+  512  ./fibo < result2
+  513  rm fibo
+  514  vim fibo.c
+  515  gcc fibo.c -o fibo
+  516  ./fibo < result2
+  517  rm result2
+  518  ./fibo > result2
+  519  cat result2
+  520  rm fibo
+  521  vim fibo.c
+  522  gcc fibo.c -o fibo
+  523  ./fibo > result2
+  524  cat fibo.c
+  525  ./fibo > result2
+  526  cat resutl2
+  527  cat result2
+  528  ./fibo > result2
+  529  cat result2
+  530  ls
+  531  cd
+  532  chmod 777 midexam
+  533  ls -l midexam
+  534  ls -l
+  535  vim wc2.c
+  536  ls
+  537  rm wc2.c
+  538  cd midexam
+  539  ls -l
+  540  clear
+  541  ls
+  542  history > mycommands
