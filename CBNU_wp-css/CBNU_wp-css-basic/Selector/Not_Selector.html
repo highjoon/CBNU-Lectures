@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Not Selector</title>
+    <style>
+        input:not([type=password]) {
+            background-color: red;
+        }
+
+        /* password 타입이 아닌 요소들 */
+    </style>
+</head>
+
+<body>
+    <input type="password"><br>
+    <input type="text"><br>
+    <input type="password"><br>
+    <input type="email"><br>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Attribute Selector</title>
+    <style>
+        * {
+            color: red;
+        }
+
+        /* ' * ' : 모든 요소를 선택하겠다. */
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: orange;
+        }
+
+        /* 태그 선택자 */
+
+        #header {
+            color: blue;
+        }
+
+        /* #~ : id 선택자 */
+
+        #email {
+            color: #9999FF;
+        }
+
+        .header {
+            border: 1px solid gray;
+        }
+
+        .select {
+            color: blue;
+        }
+
+        /* ' . ' : 클래스 선택자 */
+    </style>
+</head>
+
+<body>
+    <h1>Title 1</h1>
+    <p>Content1</p>
+    <p>Content2</p>
+
+    </br>
+
+    <h1 id="header">Title 2</h1>
+    <p id="email">yundosa2@naver.com</p>
+
+    </br>
+
+    <h1 class="header">Title 3</h1>
+    <ul>
+        <li class="select header">Selected Item</li>
+        <li>Unselected Item</li>
+        <li>Unselected Item</li>
+        <li class="select">Selected Item</li>
+    </ul>
+</body>
+
+</html>
