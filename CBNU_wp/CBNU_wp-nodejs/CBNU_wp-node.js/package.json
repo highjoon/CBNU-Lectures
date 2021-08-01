@@ -1,0 +1,32 @@
+{
+  "name": "CBNU_wp-node.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "builtin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "clear": "rimraf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoonSangJoon/CBNU_wp-node.js.git"
+  },
+  "keywords": [],
+  "author": "YoonSangJoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoonSangJoon/CBNU_wp-node.js/issues"
+  },
+  "homepage": "https://github.com/YoonSangJoon/CBNU_wp-node.js#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2"
+  }
+}

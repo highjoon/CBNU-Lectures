@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position : Absolute 실습</title>
+
+    <style>
+        div:not(.item) {
+            margin: 0;
+            padding: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            border: 1px solid black;
+        }
+
+        /* div 중 class가 item이 아닌 요소들만 선택 */
+
+        .absolute {
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+        }
+
+        /* body의 오른쪽 기준으로, 오른쪽에서 100, 밑에서 100 떨어진 공간에 절대값으로 존재. */
+
+        /* 쌓이는 흐름값에서 제외되어, default position 1, 2 사이에 있지 않고, 별개의 것으로 취급. */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h5>Default Position 1</h5>
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+    </div>
+
+
+    <div class="absolute">
+        <h5>Absolute Position</h5>
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+    </div>
+
+    <div>
+        <h5>Default Position 2</h5>
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+    </div>
+</body>
+
+</html>

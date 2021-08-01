@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype 실습</title>
+</head>
+
+<body>
+    <script>
+        function Character(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+
+        Character.prototype.say = function () {
+            document.write(`Hi~ My name is ${this.lastName}`);
+        };
+
+        const c1 = new Character('길동', '홍', 18);
+        const c2 = new Character('춘향', '성', 17);
+        const c3 = new Character('꺽정', '임', 30);
+
+        c1.say();
+        document.write('<br>');
+
+        c2.say();
+        document.write('<br>');
+
+        c3.say();
+        document.write('<br>');
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>비동기적 Callback 실습</title>
+</head>
+
+<body>
+    <script>
+        const users = [{ id: 1, name: '홍길동' }, { id: 2, name: '임꺽정' }, { id: 3, name: '전우치' }];
+
+        function findUser(id, callback) {
+            setTimeout(() => {
+                const user = users.find(u => u.id === id);
+                user ? callback(null, user) : callback(new Error('User not found'));
+            }, Math.floor(Math.random() * 100)); // 1초 후, 결과를 콜백 함수를 통해 전달
+        }
+
+        function processUser(err, user) {
+            if (err) return console.log('사용자를 찾을 수 없습니다.');
+            console.log(`회원명은 ${user.name}입니다.`);
+        };
+
+        function helloUser(e, u) {
+            if (e) {
+                console.error(e.message);
+            }
+            console.log(`Hi~! ${u.name}`);
+        }
+
+        findUser(1, processUser);
+        findUser(2, processUser);
+        findUser(3, processUser);
+        findUser(5, processUser);
+        findUser(3, helloUser);
+        findUser(3, (err, user) => {
+            console.log(`Hello~ ${user.name}`);
+        });
+    </script>
+</body>
+
+</html>

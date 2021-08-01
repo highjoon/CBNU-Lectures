@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Window 객체 실습</title>
+</head>
+
+<body>
+    <script>
+        const child = window.open('', '', 'width=300, height=200');
+        let cnt = 0;
+
+        child.document.body.innerHTML = '<h1>Hi~Child!</h1>';
+        child.moveTo(0, 0);
+        const id = setInterval(() => {
+            child.moveBy(10, 10);
+            cnt++;
+            if (cnt === 20) {
+                clearInterval(id);
+                child.close();
+            }
+        }, 500);
+    </script>
+</body>
+
+</html>

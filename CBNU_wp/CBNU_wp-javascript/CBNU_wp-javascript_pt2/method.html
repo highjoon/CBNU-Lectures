@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>메서드 선언</title>
+</head>
+
+<body>
+    <script>
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+
+            getArea() {
+                return this.width * this.height;
+            }
+        }
+
+        const rect = new Rectangle(10, 20);
+        const area = rect.getArea();
+        document.write(area);
+
+        // function Rectange(widht, height) {
+        //     this.widht = widht;
+        //     this.height = height;
+        // }
+
+        // Rectangle.prototype.getArea = function () {
+        //     return this.width * this.height;
+        // }
+
+        // const rect = new Rectange(10, 20);
+        // const area = rect.getArea();
+        // document.write(area);
+    </script>
+</body>
+
+</html>

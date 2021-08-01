@@ -1,0 +1,38 @@
+{
+  "development": {
+    "username": "root",
+    "password": "asb12865",
+    "database": "auction",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "mysql": {
+    "host": "us-cdbr-east-02.cleardb.com",
+    "database": "auction",
+    "user": "b02ca3e1075e79",
+    "password": "5e684666"
+  },
+  "server": {
+    "port": 3306
+  },
+  "app": {
+    "layouts": true,
+    "themes": true,
+    "languages": true
+  }
+}

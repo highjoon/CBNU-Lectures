@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+.ball {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    background: linear-gradient(#cb60b3 0%, #db36a4 100%);
+
+    animation-name: ball; /* 뒤의 키프레임에서 설정한 이름을 여기에 연결 */
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    /* 진행되는 속도 (기본값 linear) */
+
+    /* animation-iteration-count: infinite; */  /* 계속 반복 (또는 일정 횟수 지정 가능)*/
+    /* animation-direction: alternate; */       /* 갔다가 돌아옴 */
+    /* animation-play-state: paused; */         /* 멈춤 */
+}
+
+.ball > h1 {
+    line-height: 200px;
+}
+
+@keyframes ball {
+    from {
+        left: 0;
+
+        transform: rotate(0deg);
+    }
+
+    50% {
+        left: 500px;
+    }
+
+    to {
+        left: 500px;
+        transform: rotate(360deg);
+    }
+}

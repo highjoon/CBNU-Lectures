@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float 속성을 이용한 레이아웃 실습</title>
+    <style>
+        body {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        aside {
+            width: 400px;
+            margin-right: 60px;
+            float: left;
+        }
+
+        section {
+            width: 500px;
+            float: left;
+        }
+
+        /* 연속해있는 여러 요소들이 float: left를 갖고 있는 경우 일렬로 나열된다는 특징이 있다.*/
+
+        .wrap {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <div class="wrap">
+        <aside>
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nobis? Explicabo, voluptatibus laboriosam
+                neque a aperiam iusto ratione voluptas nisi architecto libero temporibus autem facere ab cupiditate
+                officiis quisquam in, veritatis culpa? Quo, obcaecati rem? Perspiciatis reprehenderit minus corporis,
+                labore enim culpa pariatur quod odit distinctio minima excepturi sunt repellat delectus. Amet sint
+                nesciunt quaerat dolores sapiente labore quia nostrum itaque tempore quam ipsa, eos consectetur suscipit
+                totam commodi provident optio incidunt perspiciatis dolorum temporibus. Optio numquam, voluptas eius,
+                esse aliquid beatae incidunt voluptatibus consectetur quisquam inventore repellendus, molestias suscipit
+                dolorum quaerat. Ab eum, ullam facilis accusantium hic nesciunt itaque iure veritatis ipsam harum
+                dolorum eos similique soluta corrupti provident, impedit recusandae perferendis minus quidem amet
+                possimus, repellat omnis autem. Adipisci temporibus nobis quas repellat, dolore mollitia quia animi
+                perferendis, necessitatibus excepturi obcaecati exercitationem minus fuga quam dolorum cum quibusdam
+                ducimus magni est voluptate. Neque consectetur dolor atque necessitatibus ipsum?</p>
+        </aside>
+        <section>
+            <h1>Section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sit eveniet maiores dicta natus facilis
+                cumque, quis, aspernatur placeat amet voluptatibus, iusto saepe? Reiciendis quaerat, veniam ut maxime
+                quos provident harum architecto ipsa sint quas. Aliquid molestiae exercitationem iure nulla dolores unde
+                veritatis porro saepe! Eius numquam ea ipsa praesentium minima, voluptatum, officiis dolorem suscipit
+                saepe exercitationem atque? Facilis quisquam quidem id, provident, sed quas nostrum obcaecati debitis
+                commodi consequatur sit ex iste, earum deserunt nam veniam quam error molestiae nisi. Fuga quam
+                quibusdam est aliquid nihil corrupti ab, in porro laboriosam asperiores officiis harum assumenda, vitae,
+                soluta temporibus eos omnis! Rem ad fuga eveniet sed. Suscipit voluptates maiores rem quae excepturi
+                accusamus sapiente et! Dolores quia odio reiciendis optio eos voluptas sed repellat sit rerum minus
+                minima a, placeat consequatur? Quos, harum itaque iusto ullam soluta veniam nihil impedit excepturi,
+                nisi voluptatum optio id totam, deserunt perferendis voluptatibus esse?</p>
+        </section>
+    </div>
+    <footer>
+        <h1>Footer</h1>
+    </footer>
+</body>
+
+</html>

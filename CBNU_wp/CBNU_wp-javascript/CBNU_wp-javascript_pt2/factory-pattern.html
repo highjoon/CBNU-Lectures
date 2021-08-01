@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>팩토리 패턴 실습</title>
+</head>
+
+<body>
+    <script>
+        function createCharacter(firstName, lastName, age) {
+            return {
+                firstName: firstName,
+                lastName: lastName,
+                age: age,
+                say() {
+                    document.write(`Hi~ My name is ${this.firstName}`);
+                }
+            }
+        }
+        const c1 = createCharacter('길동', '홍', 18);
+        const c2 = createCharacter('춘향', '성', 17);
+        const c3 = createCharacter('꺽정', '임', 30);
+
+        c1.say();
+        document.write('<br>');
+        c2.say();
+        document.write('<br>');
+        c3.say();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Async/await 함수 예외처리</title>
+</head>
+
+<body>
+    <script>
+        async function asynTask() {
+            try {
+                const result1 = await asyncA();
+                console.log(reuslt1);
+                const result2 = await asyncB();
+                console.log(result2);
+            }
+            catch (e) {
+                continue;
+            }
+        }
+
+        asynTask()
+            .then(() => console.log('done!'));
+    </script>
+</body>
+
+</html>

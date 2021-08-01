@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <a href="/">
+        <p>웹응용프로그래밍 - Node.js를 활용한 경매사이트</p>
+      </a>
+    </header>
+
+    <main class="profile-wrap">
+      <div class="profile">
+        {% if user and user.id %}
+        <div class="user-name">안녕하세요. {{user.nick}} 회원님!</div>
+        <div class="user-money">현재 {{user.nick}} 회원님의 보유 자산은 {{user.money}}원 입니다.</div>
+        <input type="hidden" id="my-id" value="user.id">
+        <div class="btn-section">
+          <a href="/auth/logout" id="logout" class="btn">로그아웃</a>
+          <a href="/good" id="register" class="btn">상품 등록</a>
+        </div>
+        {% else %}
+        <form action="/auth/login" id="login-form" method="post">
+          <div class="input-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required autofocus>
+          </div>
+          <div class="input-group">
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="btn-section">
+            <button id="login" class="btn" type="submit">로그인</button>
+            <a href="/join" id="join" class="btn">회원가입</a>
+          </div>
+        </form>
+        {% endif %}
+      </div>
+    </main>
+  </div>
+  {% block good %}
+  {% endblock %}
+  {% block content %}
+  {% endblock %}
+
+  <script>
+    window.onload = () => {
+      if (new URL(location.href).searchParams.get('loginError')) {
+        alert(new URL(location.href).searchParams.get('loginError'));
+      }
+    };
+  </script>
+</body>
+
+</html>

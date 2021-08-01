@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Transform Perspective 실습</title>
+    <style>
+        .wrapper {
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            perspective: 200px;
+            /* 숫자 바꾸면서 테스트 (400px 등) */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotateX(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

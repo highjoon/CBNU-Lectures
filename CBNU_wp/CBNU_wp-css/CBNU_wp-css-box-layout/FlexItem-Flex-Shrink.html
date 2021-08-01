@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flex아이템 Flex Shrink 실습</title>
+    <style>
+        .flex-box {
+            display: flex;
+            width: 250px;
+            height: 250px;
+            background-color: lightgray;
+        }
+
+        .flex-item {
+            width: 100px;
+            margin: 10px;
+            background-color: cornflowerblue;
+        }
+
+        .item1 {
+            flex-shrink: 1;
+        }
+
+        .item2 {
+            flex-shrink: 2;
+        }
+
+        .item3 {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div class="flex-item item1">Flex Item 1</div>
+        <div class="flex-item item2">Flex Item 2</div>
+        <div class="flex-item item3">Flex Item 3</div>
+    </div>
+</body>
+
+</html>
