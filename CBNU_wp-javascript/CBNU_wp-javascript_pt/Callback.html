@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Callback 함수 실습</title>
+</head>
+
+<body>
+    <script>
+        function f1(cb) {
+            cb();
+        }
+
+        function f2() {
+            console.log("콜백 함수 입니다.");
+        }
+
+        f1(f2);
+        f1(function () {
+            alert("콜백 함수 2 입니다.");
+        });
+        f1(() => console.log("콜백 함수 3 입니다."));
+    </script>
+</body>
+
+</html>

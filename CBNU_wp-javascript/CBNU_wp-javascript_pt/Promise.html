@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>비동기 작업의 동기화</title>
+</head>
+
+<body>
+    <script>
+        const users = [{ id: 1, name: '임꺽정', username: 'lim' }, { id: 2, name: '홍길동', username: 'hong' }];
+        const scores = [{ userId: 1, score: 80 }, { userId: 2, score: 70 }];
+
+        function findUserbyUsername(username, cb) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const user = users.find(u => u.username === username);
+                    !user ? reject(new Error('User Not Found')) : resolve(user);
+                }, Math.floor(Math.random() * 100));
+            });
+        }
+
+        function findScoreByUserId(userId, cb) {
+            return new Promise((resolve, reject) =>
+                setTimeout(() => {
+                    const score = scores.find(s => s.userId === userId);
+                    !score ? reject(new Error('Not Found')) : resolve(score);
+                }, 200)
+            );
+        }
+
+        findUserbyUsername('lim')   // Promise 객체 리턴
+            .then(user => findScoreByUserId(user.id))
+            .then(score => console.log(`점수는 ${score.score}입니다.`))
+            .catch(err => console.error(err.message));
+    </script>
+
+</body>
+
+</html>

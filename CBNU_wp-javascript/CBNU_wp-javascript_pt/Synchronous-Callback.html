@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>동기적 Callback 실습</title>
+</head>
+
+<body>
+    <script>
+        const students = [
+            { name: '홍길동', score: 80 },
+            { name: '임꺽정', score: 77 },
+            { name: '전우치', score: 82 },
+            { name: '이몽룡', score: 99 },
+            { name: '유관순', score: 92 },
+        ];
+
+        // 배열 students의 메소드의 매개변수로 전달한 함수들은 동기적으로 실행됨
+        // students.sort((s1, s2) => s2.score - s1.score);        // 점수로 내림차순 정렬
+        // students.sort((s1, s2) => s1.name < s2.name ? -1 : 1); // 이름으로 오름차순 정렬
+        // students.map(s => s.name);                             // 이름로만 이루어진 배열로 치환
+        // students.forEach(s => console.log(s.name));            // 이름 출력
+        // students.reduce((acc, s) => acc + s.score, 0);         // 총점 구하기
+        // students.find(s => s.name === '홍길동');   // 이름이 '홍길동'인 학생 객체 반환
+        // students.findIndex(s => s.score === 99);  // 점수가 99인 학생 객체의 인덱스 반환
+        // students.filter(s => s.score >= 90);      // 점수가 90점 이상인 학생들의 배열 반환
+        // students.every(s => s.score > 80);        // 배열 내 학생 모두의 점수가 80점 이상인지 체크
+        // students.some(s => s.score > 80);         // 배열 내 학생들 중 점수가 80점 이상인 학생이 있는지 체크
+    </script>
+</body>
+
+</html>
